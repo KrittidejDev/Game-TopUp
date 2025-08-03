@@ -1,7 +1,10 @@
 // import BgStandard from "./BgStandard";
 
+import NavAndFooter from "./NavAndFooter";
+
 const EXPORT = {
-//   BgStandard,
+  //   BgStandard,
+  NavAndFooter,
 };
 
 export default EXPORT;

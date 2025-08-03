@@ -1,7 +1,9 @@
 // import BgStandard from "./BgStandard";
+import NavbarIcon from "./NavbarIcon";
 
 const EXPORT = {
-//   BgStandard,
+  //   BgStandard,
+  NavbarIcon,
 };
 
 export default EXPORT;

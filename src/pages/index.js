@@ -1,5 +1,12 @@
-import { HomeStyled } from "@/styles/homeStyled";
+import { Mainlayouts } from "@/components";
+import { HomeStyled } from "@/styles/HomeStyled";
+import { BannerWidget } from "@/widgets";
 
 export default function Home() {
-  return <HomeStyled>home</HomeStyled>;
+  return (
+    <Mainlayouts.NavAndFooter>
+      <BannerWidget />
+      <HomeStyled>home</HomeStyled>
+    </Mainlayouts.NavAndFooter>
+  );
 }

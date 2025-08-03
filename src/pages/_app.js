@@ -8,16 +8,24 @@ import theme from "@/styles/theme.json";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import { Modals } from "@/components";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 function App({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <ThemeProvider theme={theme}>
-          <GlobalStyle />
-          <Component {...pageProps} />
-          <ToastContainer />
-          {/* <Modals.Alert /> */}
+          <div className={poppins.className}>
+            <GlobalStyle />
+            <Component {...pageProps} />
+            <ToastContainer />
+            {/* <Modals.Alert /> */}
+          </div>
         </ThemeProvider>
       </PersistGate>
     </Provider>
