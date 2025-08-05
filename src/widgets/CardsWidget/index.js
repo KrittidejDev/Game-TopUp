@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { CardsWidgetContainer } from "./styled";
+import CardsGame from "../../components/Cards"
 
 const CardsWidget = () => {
   const [_filterBtnActice, _setFilterBtnActive] = useState(1);
@@ -28,7 +29,7 @@ const CardsWidget = () => {
           </div>
         </div>
       </div>
-      {_filterBtnActice === 1 && <div className="card_wrap">111111111111</div>}
+      {_filterBtnActice === 1 && <div className="card_wrap"><CardsGame /></div>}
 
       {_filterBtnActice === 2 && (
         <div className="card_wrap">2222222222222222222222</div>
