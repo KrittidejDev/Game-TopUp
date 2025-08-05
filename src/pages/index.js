@@ -1,12 +1,14 @@
 import { Mainlayouts } from "@/components";
 import { HomeStyled } from "@/styles/HomeStyled";
-import { BannerWidget } from "@/widgets";
+import { BannerWidget, CardsWidget } from "@/widgets";
 
 export default function Home() {
   return (
     <Mainlayouts.NavAndFooter>
       <BannerWidget />
-      <HomeStyled>home</HomeStyled>
+      <HomeStyled>
+        <CardsWidget />
+      </HomeStyled>
     </Mainlayouts.NavAndFooter>
   );
 }
