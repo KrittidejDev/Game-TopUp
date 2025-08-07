@@ -23,4 +23,5 @@ export const CardsWidgetContainer = styled.div`
       }
     }
   }
+
 `;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { CardsWidgetContainer } from "./styled";
-import CardsGame from "../../components/Cards"
+import CardsGame from "../../components/Cards/Game/index.js"
 
 const CardsWidget = () => {
   const [_filterBtnActice, _setFilterBtnActive] = useState(1);
@@ -32,7 +32,7 @@ const CardsWidget = () => {
       {_filterBtnActice === 1 && <div className="card_wrap"><CardsGame /></div>}
 
       {_filterBtnActice === 2 && (
-        <div className="card_wrap">2222222222222222222222</div>
+        <div className="card_wrap">2222222222222222222222222</div>
       )}
 
       {_filterBtnActice === 3 && (
