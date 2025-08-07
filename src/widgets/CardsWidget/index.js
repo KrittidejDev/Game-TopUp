@@ -108,14 +108,13 @@ export default CardsWidget;
 
 
 function CardMockup(props) {
+  const {title, description} = props;
   return (
-    <div>
       <GameInfoCard>
       <div className="imgMockup"></div>
-      <h2>{props.title}</h2>
-      <p>{props.description}</p>
-      <a href="#">{props.link}</a>
+      <h2>{title}</h2>
+      <p>{description}</p>
+      <a href="#">See more</a>
       </GameInfoCard>
-      </div>
   );
 }
