@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const PalsaContainer = styled.div`
-    .images_card{
+    .container_palsa{
+                display: flex;
+                flex-diraction: row
                 width: 318;
                 height: 136;
                 angle: 0 deg;
@@ -10,5 +12,9 @@ export const PalsaContainer = styled.div`
                 left: 100px;
                 border-radius: 20px;
                 border-width: 2.5px;
+        .container_card{
+                display: flex;
+                flex-direction: column;
+        }
     }
 `
