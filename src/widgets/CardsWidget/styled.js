@@ -4,6 +4,7 @@ export const CardsWidgetContainer = styled.div`
   min-height: 100dvh;
   width: 100%;
   .filter_wrap {
+    margin-bottom: 26px;
     width: 100%;
     display: flex;
     .filter_btn_row {
@@ -23,4 +24,16 @@ export const CardsWidgetContainer = styled.div`
       }
     }
   }
+  .line{
+    margin-bottom: 65px;
+    border-bottom: 3px solid #494949;
+    width: 100%;
+  }
+  .card_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    row-gap: 110px;
+  }
+
 `;
