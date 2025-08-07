@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
 export const CardsGameContainer = styled.div`
-.group_card{
     font-family: Poppins;
     width: 258px;
     leading-trim: NONE;
     vertical-align: middle;
     line-height: 3rem;
-    padding-top: 80px;
     .images_card{
         .images_game{
             width: 258px;
@@ -34,5 +32,4 @@ export const CardsGameContainer = styled.div`
     .readmore_card img{
         margin-bottom: -5px;
         padding-left: 15px;}
-}
 `;
