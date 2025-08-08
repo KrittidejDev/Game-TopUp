@@ -105,16 +105,3 @@ const _MOCKUP_CARD_GAME = [
 
 export default CardsWidget;
 
-
-
-function CardMockup(props) {
-  const {title, description} = props;
-  return (
-      <GameInfoCard>
-      <div className="imgMockup"></div>
-      <h2>{title}</h2>
-      <p>{description}</p>
-      <a href="#">See more</a>
-      </GameInfoCard>
-  );
-}
