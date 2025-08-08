@@ -3,6 +3,7 @@ import { NavAndFooterStyles } from "./styled";
 import { NavbarWidget } from "@/widgets";
 import Footer from "./Footer";
 
+
 const NavAndFooter = ({ children }) => {
   return (
     <NavAndFooterStyles>
