@@ -4,7 +4,7 @@ export const CardsWidgetContainer = styled.div`
   min-height: 100dvh;
   width: 100%;
   .filter_wrap {
-    margin-bottom: 26px;
+    margin-bottom: 22px;
     width: 100%;
     display: flex;
     .filter_btn_row {
@@ -14,9 +14,11 @@ export const CardsWidgetContainer = styled.div`
         color: #4b4b4b;
         font-size: 27px;
         font-weight: 500;
+        padding-bottom: 7px;
         cursor: pointer;
         &.active {
           color: #c0621b;
+          border-bottom: 4px solid #C0621B;
         }
         &:hover {
           color: #c0621b;
