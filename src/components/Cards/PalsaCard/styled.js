@@ -32,6 +32,7 @@ export const PalsaContainer = styled.div`
                padding: 16px;
                display: flex;
                flex-direction: column;
+               justify-content: space-between;
 
 
         .title_card{
@@ -40,6 +41,7 @@ export const PalsaContainer = styled.div`
                 font-size: 19px;
                 line-height: 1;
                 letter-spacing: 0;
+                color: hsla(0, 0%, 60%, 1);
                                 }
         .description_card{
                 font-family: 'Poppins', sans-serif;
@@ -47,6 +49,7 @@ export const PalsaContainer = styled.div`
                 font-size: 32px;
                 line-height: 1;           
                 letter-spacing: 0;
+                color: hsla(0, 0%, 60%, 1);
                             }
             }
         }

@@ -12,6 +12,7 @@ const PalsaCard = ({ data }) => {
           </div>
           <div className='container_card'>
             <p className="title_card">{data.title}</p>
+            <br/>
             <p className="description_card">{data.description}</p>
           </div>
           </div>
