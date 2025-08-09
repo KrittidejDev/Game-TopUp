@@ -8,7 +8,7 @@ const NavAndFooter = ({ children }) => {
     <NavAndFooterStyles>
       <NavbarWidget />
       {children}
-      {/* footerwidgets */}
+      <Footer />
     </NavAndFooterStyles>
   );
 };
