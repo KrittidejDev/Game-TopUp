@@ -44,16 +44,20 @@ const MENU_LIST = [
     routePath: "/",
   },
   {
-    label: "Event",
-    routePath: "/event",
+    label: "Game",
+    routePath: "/game",
   },
   {
     label: "Promotion",
     routePath: "/promotion",
   },
   {
-    label: "Contact Us",
-    routePath: "/contact-us",
+    label: "VIP Zone",
+    routePath: "/vip-zone",
+  },
+  {
+    label: "About Us",
+    routePath: "/about-us",
   },
 ];
 
