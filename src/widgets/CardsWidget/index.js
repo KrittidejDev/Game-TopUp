@@ -42,7 +42,12 @@ const CardsWidget = () => {
       )}
 
       {_filterBtnActice === 2 && (
-        <div className="card_wrap">2222222222222222222222222</div>
+        <div className="card_wrap">
+          {_MOCKUP_CARD_PULSA && _MOCKUP_CARD_PULSA.map((e, i) => (
+          <div className="card_item" key={i}>
+            <Cards.PalsaCard data={e} />
+          </div>
+        ))}</div>
       )}
 
       {_filterBtnActice === 3 && (
@@ -103,5 +108,55 @@ const _MOCKUP_CARD_GAME = [
   },
 ]
 
+const _MOCKUP_CARD_PULSA = [
+  {
+    id: 1,
+    title: "Pulsa",
+    description: "RP.",
+    image: "/images/card-game/3-pic.png",
+  },
+  {
+    id: 1,
+    title: "Pulsa",
+    description: "RP.",
+    image: "/images/card-game/3-pic.png",
+  },
+  {
+    id: 1,
+    title: "Pulsa",
+    description: "RP.",
+    image: "/images/card-game/3-pic.png",
+  },
+  {
+    id: 1,
+    title: "Pulsa",
+    description: "RP.",
+    image: "/images/card-game/3-pic.png",
+  },
+  {
+    id: 1,
+    title: "Pulsa",
+    description: "RP.",
+    image: "/images/card-game/3-pic.png",
+  },
+  {
+    id: 1,
+    title: "Pulsa",
+    description: "RP.",
+    image: "/images/card-game/3-pic.png",
+  },
+  {
+    id: 1,
+    title: "Pulsa",
+    description: "RP.",
+    image: "/images/card-game/3-pic.png",
+  },
+  {
+    id: 1,
+    title: "Pulsa",
+    description: "RP.",
+    image: "/images/card-game/3-pic.png",
+  },
+]
 export default CardsWidget;
 
