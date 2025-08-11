@@ -14,10 +14,9 @@ export const FooterStyles = styled.footer`
   color: ${({ theme }) => theme.COLORS.WHITE_1};
   padding: 28px 0 0;
 
-
   .inner{
     width:100%;
-    max-width:1200px;     
+    max-width:1200px;
     margin:0 auto;
     padding:0 20px;
     box-sizing:border-box;
@@ -59,18 +58,15 @@ export const FooterStyles = styled.footer`
   .call .label{ color:${({ theme }) => theme.COLORS.GRAY_1}; margin-bottom:4px; }
   .call .number{ font-size:38px; font-weight:800; line-height:1; }
 
-
   .bottom{
-  padding: 10px 0 22px;
-  display:grid; grid-template-columns:1fr auto; align-items:center;
+    padding: 10px 0 22px;
+    display:grid; grid-template-columns:1fr auto; align-items:center;
   }
 
   .policy{ display:flex; gap:36px; }
   .policy a{
     color:${({ theme }) => theme.COLORS.GRAY_1}; text-decoration:none; font-weight:500;
   }
-
-
 
   @media (max-width: 992px){
     .top{ grid-template-columns:1fr; gap:20px; }

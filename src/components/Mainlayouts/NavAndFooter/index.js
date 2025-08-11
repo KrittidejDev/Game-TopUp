@@ -1,7 +1,7 @@
 import React from "react";
 import { NavAndFooterStyles } from "./styled";
 import { NavbarWidget } from "@/widgets";
-import Footer from "./Footer";
+import Footer from "./footer"; // 
 
 const NavAndFooter = ({ children }) => {
   return (
