@@ -25,7 +25,15 @@ export const PromotionContainer = styled.div`
             }
     }
 
-    .promotionCardContainer {
+    .promotionCardsWrap {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        div {
+            display: flex;
+            width: 400px;
+            height: 309px;
+        }
     }
 `;

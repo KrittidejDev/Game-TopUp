@@ -1,13 +1,23 @@
-import React from "react";
+import { React,  useState } from "react";
 import { PromotionContainer } from "./styled";
 import { Mainlayouts } from "@/components";
 
-const Promotion = () => {
+function PromotionTabs() {
+  const [activeTab, setActiveTab] = useState("all");
+  const handleTabClick = () => {
+    setActiveTab(tab);
+  };
+
   return (
     <Mainlayouts.NavAndFooter>
-      <PromotionContainer>Promotion</PromotionContainer>
+      <PromotionContainer>
+        <h1>โปรโมชั่น</h1>
+        <div>
+          <button></button>
+        </div>
+      </PromotionContainer>
     </Mainlayouts.NavAndFooter>
   );
 };
 
-export default Promotion;
+export default PromotionTabs 
