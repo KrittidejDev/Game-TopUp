@@ -24,7 +24,7 @@ const VipZone = () => {
         <div className="vip-zone-banner">
             {/* <img src="/images/vip-zone/AdsImg.png" alt="vip-zone" /> */}
         </div>
-        <section>
+        <div className="vip-zone">
           <div className="vip-zone-header">
             <div>
               <img src="/images/vip-zone/GameNation.png" alt="vip-zone"></img>
@@ -39,7 +39,7 @@ const VipZone = () => {
               เติมเกมสนุกยิ่งขึ้น คุ้มกว่าเดิม!! เพียงเติมเกมครบ 600 บาท ใน 6 เดือน รับรางวัลพิเศษมากมาย
             </p>
           </div>
-          <main className="vip-zone-main">
+          <div className="vip-zone-main">
             <div className="top-up-privileges">
               <h2>สิทธิพิเศษต่างๆของเหล่านักเติม</h2>
               {/* <Privileges /> */}
@@ -59,8 +59,8 @@ const VipZone = () => {
                 <div> Ultimate Black Member</div>
               </div>
             </div>
-          </main>
-          <footer className="vip-zone-footer">
+          </div>
+          <div className="vip-zone-footer">
             <p>เงื่อนไขและข้อตกลง</p>
             <ul className="terms-conditions">
             {termsData.map((term, index) => (
@@ -69,8 +69,8 @@ const VipZone = () => {
               </li>
               ))}
             </ul>
-          </footer>
-        </section>
+          </div>
+        </div>
       </VipZoneContainer>
     </Mainlayouts.NavAndFooter>
   );
