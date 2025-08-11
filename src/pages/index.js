@@ -7,6 +7,7 @@ import { PromotionWidget } from "@/widgets/PromotionWidget";
 export default function Home() {
   return (
     <Mainlayouts.NavAndFooter>
+      <CardsWidget />
       <PromotionWidget />
     </Mainlayouts.NavAndFooter>
   );

@@ -1,18 +1,17 @@
-// import BgStandard from "./BgStandard";
 import React from "react";
-import { CardsGameContainer } from "./styled";
+import { CardsListrikContainer } from "./styled";
 
-const CardsGame = ({ data }) => {
+const CardsListrik = ({ data }) => {
     return (
-        <CardsGameContainer>
+        <CardsListrikContainer>
             <div className="images_card">
-                <img className="images_game" src={data.image} alt={data.title} />
+                <img className="images_game" src={data.image} alt="mobileLegendA" />
             </div>
             <p className="title_card">{data.title}</p>
             <p className="description_card">{data.description}</p>
             <div className="readmore_card">Lanjut<img src="/images/icons/read-more.png" alt="read more" /></div>
-        </CardsGameContainer >
+        </CardsListrikContainer >
     )
 };
 
-export default CardsGame;
+export default CardsListrik;

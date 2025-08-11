@@ -1,12 +1,14 @@
 // import BgStandard from "./BgStandard";
 
 import CardsGame from "./Game";
-import PalsaCard from "./PalsaCard"
+import CardsListrik from "./Listrik";
+import CardsPulsa from "./Pulsa";
 
 const EXPORT = {
-//   BgStandard,
+    //   BgStandard,
     CardsGame,
-    PalsaCard,
+    CardsListrik,
+    CardsPulsa,
 };
 
 export default EXPORT;

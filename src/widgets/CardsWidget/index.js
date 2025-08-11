@@ -25,7 +25,7 @@ const CardsWidget = () => {
             className={`filter_btn  ${_filterBtnActice === 3 ? "active" : ""}`}
             onClick={() => _setFilterBtnActive(3)}
           >
-            Listik
+            Listrik
           </div>
         </div>
       </div>
@@ -44,119 +44,30 @@ const CardsWidget = () => {
       {_filterBtnActice === 2 && (
         <div className="card_wrap">
           {_MOCKUP_CARD_PULSA && _MOCKUP_CARD_PULSA.map((e, i) => (
-          <div className="card_item" key={i}>
-            <Cards.PalsaCard data={e} />
-          </div>
-        ))}</div>
+            <>
+              <div>
+                <img className="indexSearchPhone" src={logo_images_pic_3} alt="Pulsa-Logo" />
+                </div>
+              <div className="card_item" key={i}>
+                <Cards.CardsPulsa data={e} />
+              </div>
+            </>
+          ))}
+        </div>
       )}
 
       {_filterBtnActice === 3 && (
-        <div className="card_wrap">333333333333333333333333</div>
+        <div className="card_wrap">
+          {_MOCKUP_CARD_LISTRIK && _MOCKUP_CARD_LISTRIK.map((e, i) => (
+            <div className="card_item" key={i}>
+              <Cards.CardsListrik data={e} />
+            </div>
+          ))}
+        </div>
       )}
     </CardsWidgetContainer>
   );
 };
 
-const _MOCKUP_CARD_GAME = [
-  {
-    id: 1,
-    title: "Mobile Legend A",
-    description: "Game arena pertempuran online multipemain seluler ...",
-    image: "/images/card-game/mobileLegendA.png",
-  },
-  {
-    id: 1,
-    title: "Mobile Legend A",
-    description: "Game arena pertempuran online multipemain seluler ...",
-    image: "/images/card-game/mobileLegendA.png",
-  },
-  {
-    id: 1,
-    title: "Mobile Legend A",
-    description: "Game arena pertempuran online multipemain seluler ...",
-    image: "/images/card-game/mobileLegendA.png",
-  },
-  {
-    id: 1,
-    title: "Mobile Legend A",
-    description: "Game arena pertempuran online multipemain seluler ...",
-    image: "/images/card-game/mobileLegendA.png",
-  },
-  {
-    id: 1,
-    title: "Mobile Legend A",
-    description: "Game arena pertempuran online multipemain seluler ...",
-    image: "/images/card-game/mobileLegendA.png",
-  },
-  {
-    id: 1,
-    title: "Mobile Legend A",
-    description: "Game arena pertempuran online multipemain seluler ...",
-    image: "/images/card-game/mobileLegendA.png",
-  },
-  {
-    id: 1,
-    title: "Mobile Legend A",
-    description: "Game arena pertempuran online multipemain seluler ...",
-    image: "/images/card-game/mobileLegendA.png",
-  },
-  {
-    id: 1,
-    title: "Mobile Legend A",
-    description: "Game arena pertempuran online multipemain seluler ...",
-    image: "/images/card-game/mobileLegendA.png",
-  },
-]
-
-const _MOCKUP_CARD_PULSA = [
-  {
-    id: 1,
-    title: "Pulsa",
-    description: "RP.",
-    image: "/images/card-game/3-pic.png",
-  },
-  {
-    id: 1,
-    title: "Pulsa",
-    description: "RP.",
-    image: "/images/card-game/3-pic.png",
-  },
-  {
-    id: 1,
-    title: "Pulsa",
-    description: "RP.",
-    image: "/images/card-game/3-pic.png",
-  },
-  {
-    id: 1,
-    title: "Pulsa",
-    description: "RP.",
-    image: "/images/card-game/3-pic.png",
-  },
-  {
-    id: 1,
-    title: "Pulsa",
-    description: "RP.",
-    image: "/images/card-game/3-pic.png",
-  },
-  {
-    id: 1,
-    title: "Pulsa",
-    description: "RP.",
-    image: "/images/card-game/3-pic.png",
-  },
-  {
-    id: 1,
-    title: "Pulsa",
-    description: "RP.",
-    image: "/images/card-game/3-pic.png",
-  },
-  {
-    id: 1,
-    title: "Pulsa",
-    description: "RP.",
-    image: "/images/card-game/3-pic.png",
-  },
-]
 export default CardsWidget;
 

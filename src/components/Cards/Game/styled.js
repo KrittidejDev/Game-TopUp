@@ -17,6 +17,7 @@ export const CardsGameContainer = styled.div`
         letter-spacing: 0%;
         color: #999999;}
     .description_card{
+        height: 100px;
         font-weight: 500;
         font-style: Medium;
         font-size: 22px;
