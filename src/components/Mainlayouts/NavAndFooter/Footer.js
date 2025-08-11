@@ -15,6 +15,7 @@ export default function Footer() {
   return (
     <FooterStyles>
       <div className="inner">
+        {/* Top row */}
         <div className="top">
           <div className="left">
             <Link className="logo" href="/">
@@ -28,10 +29,6 @@ export default function Footer() {
                 </Link>
               ))}
             </nav>
-
-            <p className="muted">
-              2568 บมจ.โทเทิ่ล แอ็คเซ็ส คอมมูนิเคชั่น บริษัทในกลุ่มเทเลนอร์ | Operated by dtac
-            </p>
           </div>
 
           <div className="right">
@@ -54,7 +51,9 @@ export default function Footer() {
         </div>
 
         <div className="bottom">
-          <div className="spacer" />
+          <div className="company-info">
+            2568 บมจ.โทเทิ่ล แอ็คเซ็ส คอมมูนิเคชั่น บริษัทในกลุ่มเทเลนอร์ | Operated by dtac
+          </div>
           <div className="policy">
             <Link href="/terms">เงื่อนไขการใช้งาน</Link>
             <Link href="/privacy">นโยบายความเป็นส่วนตัว</Link>
