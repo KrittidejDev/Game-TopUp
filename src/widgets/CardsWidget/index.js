@@ -7,7 +7,7 @@ const CardsWidget = () => {
 
   return (
     <CardsWidgetContainer>
-      <div className="filter_wrap">
+      {/* <div className="filter_wrap">
         <div className="filter_btn_row">
           <div
             className={`filter_btn  ${_filterBtnActice === 1 ? "active" : ""}`}
@@ -64,7 +64,7 @@ const CardsWidget = () => {
             </div>
           ))}
         </div>
-      )}
+      )} */}
     </CardsWidgetContainer>
   );
 };
