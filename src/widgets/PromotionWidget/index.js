@@ -1,5 +1,6 @@
-import PromotionCard from "@/components/Cards/Promotion";
+import PromotionCards from "@/components/Cards/Promotion";
 import { PromotionContainer } from "./styled";
+
 
 export function PromotionWidget() {
     return (
@@ -11,7 +12,7 @@ export function PromotionWidget() {
                     <img src="/images/promotion/promotion_arrow.png" alt="arrow" />
                 </a>
             </div>
-            <PromotionCard />
+            <PromotionCards />
         </div>
         </PromotionContainer>
     );

@@ -24,4 +24,8 @@ export const PromotionContainer = styled.div`
                 border-right: 2px solid #0286FF;
             }
     }
+
+    .promotionCardContainer {
+        display: flex;
+    }
 `;
