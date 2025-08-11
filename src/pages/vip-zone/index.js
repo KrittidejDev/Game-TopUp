@@ -22,7 +22,7 @@ const VipZone = () => {
     <Mainlayouts.NavAndFooter>
       <VipZoneContainer>
         <div className="vip-zone-banner">
-            <img src="/images/vip-zone/AdsImg.png" alt="vip-zone" />
+            {/* <img src="/images/vip-zone/AdsImg.png" alt="vip-zone" /> */}
         </div>
         <section>
           <div className="vip-zone-header">
@@ -62,7 +62,7 @@ const VipZone = () => {
           </main>
           <footer className="vip-zone-footer">
             <p>เงื่อนไขและข้อตกลง</p>
-            <ul className="list-disc list-inside space-y-2">
+            <ul className="terms-conditions">
             {termsData.map((term, index) => (
               <li key={index} className="text-gray-700 leading-relaxed">
                 {term}
