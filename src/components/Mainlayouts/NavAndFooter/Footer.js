@@ -9,18 +9,16 @@ const FOOTER_MENU = [
   { label: "VIP Zone", routePath: "/vip-zone" },
   { label: "About Us", routePath: "/about-us" },
   { label: "Bonus", routePath: "/bonus" },
-  
 ];
 
 export default function Footer() {
   return (
     <FooterStyles>
       <div className="inner">
- 
         <div className="top">
           <div className="left">
             <Link className="logo" href="/">
-              <img src="/images/icons/logo.png" alt="FUADSHOP" />
+              <img src="/images/footer/logo.png" alt="FUADSHOP" />
             </Link>
 
             <nav className="footer-menu">
@@ -39,11 +37,11 @@ export default function Footer() {
           <div className="right">
             <div className="actions">
               <button type="button" className="btn">
-                <img src="/images/Footer/Facebookicon.png" alt="" width={16} height={16} />
+                <img src="/images/footer/facebookicon.png" alt="" width={16} height={16} />
                 ติดตามข่าวสาร
               </button>
               <button type="button" className="btn">
-                <img src="/images/Footer/Callicon.png" alt="" width={16} height={16} />
+                <img src="/images/footer/callicon.png" alt="" width={16} height={16} />
                 แจ้งเหตุขัดข้อง
               </button>
             </div>
@@ -55,8 +53,6 @@ export default function Footer() {
           </div>
         </div>
 
-
-
         <div className="bottom">
           <div className="spacer" />
           <div className="policy">
@@ -65,7 +61,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
     </FooterStyles>
   );
 }
