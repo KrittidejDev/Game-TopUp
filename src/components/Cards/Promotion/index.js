@@ -1,22 +1,19 @@
+import React from "react";
 import { PromotionCardWrap } from "./styled";
-import { MOCKUP_PROMOTION_CARD } from "@/utils/dataMockup/promotionCardData";
 
-function PromotionCards() {
+
+function PromotionCard({data}) {
     return (
         <PromotionCardWrap>
-            {
-            MOCKUP_PROMOTION_CARD.map((e) => {
-                return <div key={e.id} className="promotionCardContainer">
+             <div key={data.id} className="promotionCardContainer">
                 <a href="#"><img src="" alt="" /></a>
                 <div className="labelContainer">
-                <p className="dateStyle">{e.date}</p>
-                <p className="labelStyle">{e.label}</p>
+                <p className="dateStyle">{data.date}</p>
+                <p className="labelStyle">{data.label}</p>
             </div>
-            <a href="#">{e.title}</a></div>
-            })
-            }
+            <a href="#">{data.title}</a></div>
         </PromotionCardWrap>
     );
 }
 
-export default PromotionCards;
+export default PromotionCard;

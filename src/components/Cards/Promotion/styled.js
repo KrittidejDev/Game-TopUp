@@ -2,15 +2,10 @@ import styled from "styled-components";
 
 export const PromotionCardWrap = styled.div`
     width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 
         .promotionCardContainer {
-            dispaly: flex;
+            display: flex;
             flex-direction: column;
-            width: 376px;
-            height: 285px;
             padding: 12px;
 
                 img {
@@ -20,11 +15,13 @@ export const PromotionCardWrap = styled.div`
         }
 
             .labelContainer {
+                width: 374px;
+                height: fit-content;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 gap: 8px;
-                margin-bottom: 8px;
+                margin: 8px 0;
 
                     .dateStyle {
                         background-color: rgba(255, 255, 255, 0.2);
@@ -40,12 +37,12 @@ export const PromotionCardWrap = styled.div`
             }
 
             a {
+                width: fit-content;
                 color: #ffffff;
                 font-size: 20px;
                 font-weight: 700;
+                display: inline-flex;
             }
     }
-
-        
 `
   

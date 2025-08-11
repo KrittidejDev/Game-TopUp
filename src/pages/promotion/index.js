@@ -1,13 +1,18 @@
-import React from "react";
+import { React,  useState } from "react";
 import { PromotionContainer } from "./styled";
 import { Mainlayouts } from "@/components";
+import { PromotionTabsWidget } from "@/widgets/PromotionWidget";
 
-const Promotion = () => {
+function PromotionTabs() {
+
   return (
     <Mainlayouts.NavAndFooter>
-      <PromotionContainer>Promotion</PromotionContainer>
+      <PromotionContainer>
+        <h1>โปรโมชั่น</h1>
+          <PromotionTabsWidget />
+      </PromotionContainer>
     </Mainlayouts.NavAndFooter>
   );
 };
 
-export default Promotion;
+export default PromotionTabs 

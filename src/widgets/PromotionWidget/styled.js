@@ -25,7 +25,59 @@ export const PromotionContainer = styled.div`
             }
     }
 
-    .promotionCardContainer {
+    .promotionCardsWrap {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        div {
+            display: flex;
+            width: 400px;
+            height: 309px;
+        }
     }
 `;
+
+export const PromotionTabsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .buttonContainer {
+        margin-top: 32px;
+
+        button {
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 3.5px 20.85px;
+            margin-bottom: 32px;
+
+            &.active {
+                color: #D6214C;
+                border-bottom: 3px solid #D6214C;
+            }
+        }
+    }
+
+    .promotionCardsWrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+
+        div {
+            display: flex;
+            width: 400px;
+            height: 309px;
+        }
+    }
+
+    .specialForYouMockUp {
+            display: flex;
+            justify-content: center;
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+`
