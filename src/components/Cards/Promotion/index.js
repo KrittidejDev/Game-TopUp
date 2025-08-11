@@ -1,16 +1,22 @@
-import { PromotionCardContainer } from "./styled";
+import { PromotionCardWrap } from "./styled";
+import { MOCKUP_PROMOTION_CARD } from "@/utils/dataMockup/promotionCardData";
 
-function PromotionCard() {
+function PromotionCards() {
     return (
-        <PromotionCardContainer>
-            <a href="#"><img src="" alt="" /></a>
-            <div className="labelContainer">
-                <p className="dateStyle">Date mockup</p>
-                <p className="labelStyle">Label mockup</p>
+        <PromotionCardWrap>
+            {
+            MOCKUP_PROMOTION_CARD.map((e) => {
+                return <div key={e.id} className="promotionCardContainer">
+                <a href="#"><img src="" alt="" /></a>
+                <div className="labelContainer">
+                <p className="dateStyle">{e.date}</p>
+                <p className="labelStyle">{e.label}</p>
             </div>
-            <a href="#">Promotion Title lorem Ipsum is simply dummy text.</a>
-        </PromotionCardContainer>
+            <a href="#">{e.title}</a></div>
+            })
+            }
+        </PromotionCardWrap>
     );
 }
 
-export default PromotionCard;
+export default PromotionCards;
