@@ -2,48 +2,70 @@ import React from "react";
 import Link from "next/link";
 import { FooterStyles } from "./styled";
 
+const FOOTER_MENU = [
+  { label: "Home", routePath: "/" },
+  { label: "Game", routePath: "/game" },
+  { label: "Promotion", routePath: "/promotion" },
+  { label: "VIP Zone", routePath: "/vip-zone" },
+  { label: "About Us", routePath: "/about-us" },
+  { label: "Bonus", routePath: "/bonus" },
+  
+];
+
 export default function Footer() {
   return (
     <FooterStyles>
       <div className="inner">
-
-<div className="article">
-  <button className="arrow-btn left"  type="button">
-    <img src="/images/Footer/Arrowleft.svg" alt="previous" width={45} />
-  </button>
-
-          <img
-            src="/images/Footer/Freefirefooter.png"
-            alt="Free Fire X Assassins Creed"
-            className="image"
-          />
-
-          <div className="content">
-            <h3>FREE FIRE X ASSASSINS CREED</h3>
-            <p>
-              Free Fire X Assassins Creed segera tiba, apa saja yang baru dalam
-              kolaborasi ini? Sederet konten bertema Assassins Creed bakalan hadir
-              dalam kolaborasi FF X Assassins Creed ini.
-            </p>
-            <Link href="/blog/free-fire-x-assassins-creed">
-              Lihat Selengkapnya →
+ 
+        <div className="top">
+          <div className="left">
+            <Link className="logo" href="/">
+              <img src="/images/icons/logo.png" alt="FUADSHOP" />
             </Link>
+
+            <nav className="footer-menu">
+              {FOOTER_MENU.map((item) => (
+                <Link key={item.routePath} href={item.routePath}>
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+
+            <p className="muted">
+              2568 บมจ.โทเทิ่ล แอ็คเซ็ส คอมมูนิเคชั่น บริษัทในกลุ่มเทเลนอร์ | Operated by dtac
+            </p>
           </div>
 
-          <button className="arrow-btn" type="button">
-            <img src="/images/Footer/Arrowright.svg" alt="next" width={45} />
-          </button>
+          <div className="right">
+            <div className="actions">
+              <button type="button" className="btn">
+                <img src="/images/Footer/Facebookicon.png" alt="" width={16} height={16} />
+                ติดตามข่าวสาร
+              </button>
+              <button type="button" className="btn">
+                <img src="/images/Footer/Callicon.png" alt="" width={16} height={16} />
+                แจ้งเหตุขัดข้อง
+              </button>
+            </div>
+
+            <div className="call">
+              <span className="label">Call Center</span>
+              <span className="number">1678</span>
+            </div>
+          </div>
         </div>
 
 
-        <div className="warning">
-          <img src="/images/Footer/Vector.svg" alt="info" />
-          Berhati-hatilah ketika kamu memilih tempat Top Up, pilihlah yang terpercaya
-          dan aman dalam bertransaksi
-        </div>
 
+        <div className="bottom">
+          <div className="spacer" />
+          <div className="policy">
+            <Link href="/terms">เงื่อนไขการใช้งาน</Link>
+            <Link href="/privacy">นโยบายความเป็นส่วนตัว</Link>
+          </div>
+        </div>
       </div>
-      <div className="copy">Copyright © 2022 FUADSHOP</div>
+
     </FooterStyles>
   );
 }
