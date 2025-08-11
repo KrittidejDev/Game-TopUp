@@ -37,11 +37,11 @@ export const PromotionCardWrap = styled.div`
             }
 
             a {
+                width: fit-content;
                 color: #ffffff;
                 font-size: 20px;
                 font-weight: 700;
-                width: 374px;
-                display: flex;
+                display: inline-flex;
             }
     }
 `
