@@ -1,41 +1,79 @@
 import styled from "styled-components";
 
 export const CardsWidgetContainer = styled.div`
-  min-height: 100dvh;
   width: 100%;
+  margin-bottom: 60px;
+  text-align: center;
+  margin-top: 72px;
   .filter_wrap {
-    margin-bottom: 22px;
-    width: 100%;
     display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
     .filter_btn_row {
       display: flex;
-      column-gap: 121px;
+      column-gap: 8px;
       .filter_btn {
-        color: #4b4b4b;
-        font-size: 27px;
+        display: flex;
+        align-items: center;
+        color: #dbdbdb;
+        font-size: 14px;
         font-weight: 500;
-        padding-bottom: 7px;
+        padding: 5px 12px;
+        background-color: #0f0f0f;
+        border: 2px solid #ffffff00;
+        border-radius: 12px;
         cursor: pointer;
+        gap: 8px;
         &.active {
-          color: #c0621b;
-          border-bottom: 4px solid #C0621B;
-        }
+          color: white;
+          border: 2px solid #d6214c;
+          box-shadow: #d6214c 0px 6px 12px -2px, #d6214c 0px 3px 7px -3px;}
         &:hover {
-          color: #c0621b;
+          scale: 101%;
+          transition: 0.3s;
+          border: 2px solid #d6214c;
+          box-shadow: #d6214c 0px 6px 12px -2px, #d6214c 0px 3px 7px -3px;
+        }
+        .btn_tab{
+          font-size: 14px;
         }
       }
     }
   }
-  .line{
-    margin-bottom: 65px;
-    border-bottom: 3px solid #494949;
-    width: 100%;
-  }
-  .card_wrap{
+  .card_wrap {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 60px;
-    row-gap: 110px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 9px;
+    box-sizing: border-box;
+    .card_item {
+      cursor: pointer;
+      &.active {
+        color: #c0621b;
+        border-bottom: 4px solid #C0621B;}
+      &:hover{
+        scale: 105%;
+        transition: 0.3s;}
+      &:hover::before {
+        opacity: 1;
+        transform: rotate(-45deg) translateY(100%);
+      }
+    }
   }
-
+  .more_games{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    color: aqua;
+    gap: 10px;
+    cursor: pointer;
+    &:hover{
+      opacity: 0.8;
+      scale: 101%;
+      transition: 0.3s;}
+  }
 `;

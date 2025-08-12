@@ -4,9 +4,9 @@ import { GameContainer } from "./styled";
 
 const index = () => {
   return (
-    <Mainlayouts.NavAndFooter>
+    <Mainlayouts.NavAndFooterWithBanner>
       <GameContainer>Game</GameContainer>
-    </Mainlayouts.NavAndFooter>
+    </Mainlayouts.NavAndFooterWithBanner>
   );
 };
 

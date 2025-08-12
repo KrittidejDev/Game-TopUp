@@ -9,8 +9,15 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import { Modals } from "@/components";
 import { Poppins } from "next/font/google";
+import { Prompt } from "next/font/google";
+
 
 const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const prompt = Prompt({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
@@ -20,7 +27,7 @@ function App({ Component, pageProps }) {
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <ThemeProvider theme={theme}>
-          <div className={poppins.className}>
+          <div className={`${poppins.className} ${prompt.className}`}>
             <GlobalStyle />
             <Component {...pageProps} />
             <ToastContainer />
