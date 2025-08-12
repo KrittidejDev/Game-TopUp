@@ -3,6 +3,7 @@ import React from "react";
 import { NavbarWidgetStyles } from "./styled";
 import Link from "next/link";
 import { Icons } from "@/components";
+import MemberLoggedWidget from "../MemberLoggedWidget";
 
 const NavbarWidget = () => {
   const router = useRouter();
@@ -32,7 +33,7 @@ const NavbarWidget = () => {
             </Link>
           ))}
         </div>
-        <div>avartar</div>
+        <MemberLoggedWidget />
       </div>
     </NavbarWidgetStyles>
   );

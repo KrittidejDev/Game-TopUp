@@ -1,7 +1,10 @@
 // import BgStandard from "./BgStandard";
 
+import Pdpa from "./Pdpa";
+
 const EXPORT = {
-//   BgStandard,
+  //   BgStandard,
+  Pdpa,
 };
 
 export default EXPORT;
