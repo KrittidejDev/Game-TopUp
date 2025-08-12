@@ -1,36 +1,30 @@
 import styled from "styled-components";
 
 export const CardsGameContainer = styled.div`
-    font-family: Poppins;
-    width: 258px;
-    leading-trim: NONE;
+    font-family: Prompt;
     vertical-align: middle;
-    line-height: 3rem;
+    line-height: 1.75rem;
     .images_card{
+        position: relative;
+        .discount_card{
+            position: absolute;
+            width: 100%;
+            font-weight: 500;
+            font-style: Medium;
+            font-size: 15px;
+            text-align: center;
+            color: white;
+            background-color: #DFA50E;
+            border-radius: 0 0 12px 12px;
+            bottom: 10px;
+            margin: 0px;}
         .images_game{
-            width: 258px;
-            height: 260px;}}
+            width: 187.33px;
+            height: 240px;
+            border-radius: 0 0 12px 12px;}}
     .title_card{
-        font-weight: 600;
-        font-style: SemiBold;
-        font-size: 26px;
-        letter-spacing: 0%;
-        color: #999999;}
-    .description_card{
-        height: 100px;
         font-weight: 500;
-        font-style: Medium;
-        font-size: 22px;
-        line-height: 2rem;
-        letter-spacing: 0%;
-        color: #4B4B4B; }
-    .readmore_card{
-        font-weight: 600;
-        font-style: SemiBold;
-        font-size: 22px;
-        letter-spacing: 0%;
-        color: #C0621B;}
-    .readmore_card img{
-        margin-bottom: -5px;
-        padding-left: 15px;}
+        font-size: 20px;
+        color: white;}
+    
 `;
