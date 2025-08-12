@@ -26,18 +26,17 @@ export const BgStandardStyled = styled.div`
         disabled ? `${theme.COLORS.WHITE_1}` : theme.COLORS.BLACK_1};
     }
   }
-
   &.theme_grow_pink {
     .btn {
       padding: 10px 24px;
       border: 1px solid ${({ theme }) => theme.COLORS.PINK_1};
       background: ${({ theme, disabled }) =>
-        disabled ? `${theme.COLORS.GRAY_1}` : theme.COLORS.PINK_1};
+        disabled ? `transparent` : theme.COLORS.PINK_1};
       color: ${({ theme, disabled }) =>
-        disabled ? `${theme.COLORS.WHITE_1}` : theme.COLORS.WHITE_1};
+        disabled ? `${theme.COLORS.PINK_1}` : theme.COLORS.WHITE_1};
       &:hover {
         background: ${({ theme, disabled }) =>
-          disabled ? `${theme.COLORS.GRAY_1}` : theme.COLORS.PINK_1};
+          disabled ? `transparent` : theme.COLORS.PINK_1};
         color: ${({ theme, disabled }) =>
           disabled ? `${theme.COLORS.WHITE_1}` : theme.COLORS.WHITE_1};
         box-shadow: ${({ theme, disabled }) =>

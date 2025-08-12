@@ -7,23 +7,43 @@ export const LoginFormStyled = styled.div`
   display: flex;
   flex-direction: column;
   column-gap: 10px;
-  .title {
-    font-size: ${({ theme }) => theme.FONTS.SIZES.S20};
-    font-weight: ${({ theme }) => theme.FONTS.WEIGHTS.SEMIBOLD};
-  }
-  .input_group {
-    input {
-      margin-top: 10px;
-      padding: 10px;
-      width: 95%;
-      max-width: 495px;
-      outline: none;
-      border-radius: 5px;
-      border: 1px solid ${({ theme }) => theme.COLORS.GRAY_1};
+  .title_wrap {
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .image_wrap {
+      position: relative;
+      width: 100px;
+      height: 100px;
     }
-    label {
-      font-size: ${({ theme }) => theme.FONTS.SIZES.S14};
-      color: ${({ theme }) => theme.COLORS.BLACK_1};
+    .title {
+      font-size: ${({ theme }) => theme.FONTS.SIZES.S20};
+      font-weight: ${({ theme }) => theme.FONTS.WEIGHTS.SEMIBOLD};
+    }
+  }
+  .otp_login_wrap {
+    .input_wrap {
+      margin-bottom: 30px;
+    }
+  }
+  .filter_wrap {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-end;
+    .btn_wrap {
+      border: 1px solid ${({ theme }) => theme.COLORS.PINK_1};
+      border-radius: 10px;
+      padding: 4px;
+      .filter_btn {
+        border-radius: 10px;
+        padding: 8px 10px;
+        color: ${({ theme }) => theme.COLORS.PINK_1};
+        &.active {
+          color: ${({ theme }) => theme.COLORS.WHITE_1};
+          background: ${({ theme }) => theme.COLORS.PINK_1};
+        }
+      }
     }
   }
   .check_group {

@@ -7,12 +7,10 @@ export const authenSlice = createSlice({
   initialState,
   reducers: {
     setReduxAuthen: (state, action) => {
-      state = action.payload;
-      return state;
+      return action.payload;
     },
     setReduxAuthenClear: (state) => {
-      state = false;
-      return state;
+      return false;
     },
   },
 });
