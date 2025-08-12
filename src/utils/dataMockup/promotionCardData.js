@@ -1,48 +1,3 @@
-export const MOCKUP_PROMOTION_CARD = [
-  {
-    id: 1,
-    img: "/",
-    date: "2015-09-25",
-    label: "Special for you",
-    title: "MOCKUP_01",
-  },
-  {
-    id: 2,
-    img: "/",
-    date: "2015-09-25",
-    label: "Special for you",
-    title: "MOCKUP_02",
-  },
-  {
-    id: 3,
-    img: "/",
-    date: "2015-09-25",
-    label: "Special for you",
-    title: "MOCKUP_03",
-  },
-  {
-    id: 4,
-    img: "/",
-    date: "2015-09-25",
-    label: "Special for you",
-    title: "MOCKUP_04",
-  },
-  {
-    id: 5,
-    img: "/",
-    date: "2015-09-25",
-    label: "Special for you",
-    title: "MOCKUP_05",
-  },
-  {
-    id: 6,
-    img: "/",
-    date: "2015-09-25",
-    label: "Special for you",
-    title: "MOCKUP_06",
-  },
-];
-
 export const MOCKUP_PROMOTION_BANNER = [
   {
     id: 1,
@@ -52,6 +7,8 @@ export const MOCKUP_PROMOTION_BANNER = [
     discount: "12%",
     paymentMethods: ["Pay via dtac", "Pay via True"],
     image: "/images/banner/bn-promo-1.png",
+    date: "08 Aug - 24 Aug 2025",
+    label: "Special for you",
   },
   {
     id: 2,
@@ -63,6 +20,8 @@ export const MOCKUP_PROMOTION_BANNER = [
     buttonSecondary: "ดูรายละเอียด",
     paymentMethods: ["ฟรี", "ไม่เสียเงิน"],
     image: "/images/banner/bn-promo-2.png",
+    date: "26 Jun - 31 Dec 2025",
+    label: "Special for you",
   },
   {
     id: 3,
@@ -74,6 +33,8 @@ export const MOCKUP_PROMOTION_BANNER = [
     buttonSecondary: "เงื่อนไข",
     paymentMethods: ["สำหรับสมาชิก", "ไม่ต้องจ่าย"],
     image: "/images/banner/bn-promo-3.png",
+    date: "01 Aug - 31 Aug 2025",
+    label: "Special for you",
   },
   {
     id: 4,
@@ -85,6 +46,8 @@ export const MOCKUP_PROMOTION_BANNER = [
     buttonSecondary: "ดูโปรโมชั่น",
     paymentMethods: ["TrueWallet", "AIS mPAY"],
     image: "/images/banner/bn-promo-4.png",
+    date: "01 Aug - 31 Aug 2025",
+    label: "Special for you",
   },
   {
     id: 5,
@@ -96,6 +59,8 @@ export const MOCKUP_PROMOTION_BANNER = [
     buttonSecondary: "รายละเอียด",
     paymentMethods: ["ผ่อน 0%", "จ่ายเต็ม"],
     image: "/images/banner/bn-promo-5.png",
+    date: "01 Aug - 31 Aug 2025",
+    label: "Special for you",
   },
   {
     id: 6,
@@ -107,6 +72,8 @@ export const MOCKUP_PROMOTION_BANNER = [
     buttonSecondary: "ดูสินค้า",
     paymentMethods: ["บัตรเครดิต", "โมบายแบงก์กิ้ง"],
     image: "/images/banner/bn-promo-6.png",
+    date: "01 Aug - 31 Aug 2025",
+    label: "Special for you",
   },
   {
     id: 7,
@@ -118,6 +85,8 @@ export const MOCKUP_PROMOTION_BANNER = [
     buttonSecondary: "ดูแพ็คเกจ",
     paymentMethods: ["Steam Wallet", "Google Play"],
     image: "/images/banner/bn-promo-7.png",
+    date: "01 Aug - 31 Aug 2025",
+    label: "Special for you",
   },
   {
     id: 8,
@@ -129,6 +98,8 @@ export const MOCKUP_PROMOTION_BANNER = [
     buttonSecondary: "ดูข้อมูล",
     paymentMethods: ["miHoYo Account", "Third Party"],
     image: "/images/banner/bn-promo-8.png",
+    date: "01 Aug - 31 Aug 2025",
+    label: "Special for you",
   },
   {
     id: 9,
@@ -140,6 +111,8 @@ export const MOCKUP_PROMOTION_BANNER = [
     buttonSecondary: "ดู BP Card",
     paymentMethods: ["Line Pay", "ShopeePay"],
     image: "/images/banner/bn-promo-9.png",
+    date: "01 Aug - 31 Aug 2025",
+    label: "Special for you",
   },
   {
     id: 10,
@@ -151,6 +124,8 @@ export const MOCKUP_PROMOTION_BANNER = [
     buttonSecondary: "ดูแพ็คเกจ",
     paymentMethods: ["Google Play", "App Store"],
     image: "/images/banner/bn-promo-10.png",
+    date: "01 Aug - 31 Aug 2025",
+    label: "Special for you",
   },
   {
     id: 11,
@@ -162,6 +137,8 @@ export const MOCKUP_PROMOTION_BANNER = [
     buttonSecondary: "ดู Gems",
     paymentMethods: ["Supercell ID", "Credit Card"],
     image: "/images/banner/bn-promo-11.png",
+    date: "01 Aug - 31 Aug 2025",
+    label: "Special for you",
   },
   {
     id: 12,
@@ -173,6 +150,8 @@ export const MOCKUP_PROMOTION_BANNER = [
     buttonSecondary: "ดู Coin",
     paymentMethods: ["Gravity ID", "Steam"],
     image: "/images/banner/bn-promo-12.png",
+    date: "01 Aug - 31 Aug 2025",
+    label: "Special for you",
   },
   {
     id: 13,
@@ -184,6 +163,8 @@ export const MOCKUP_PROMOTION_BANNER = [
     buttonSecondary: "ดูโปรโมชั่น",
     paymentMethods: ["Roblox Card", "PayPal"],
     image: "/images/banner/bn-promo-3.png",
+    date: "01 Aug - 31 Aug 2025",
+    label: "Special for you",
   },
   {
     id: 14,
@@ -195,6 +176,8 @@ export const MOCKUP_PROMOTION_BANNER = [
     buttonSecondary: "ดู Skin Pack",
     paymentMethods: ["Microsoft", "Xbox Live"],
     image: "/images/banner/bn-promo-4.png",
+    date: "01 Aug - 31 Aug 2025",
+    label: "Special for you",
   },
   {
     id: 15,
@@ -206,5 +189,7 @@ export const MOCKUP_PROMOTION_BANNER = [
     buttonSecondary: "ดูรถใหม่",
     paymentMethods: ["Garena Shell", "Bank Transfer"],
     image: "/images/banner/bn-promo-15.png",
+    date: "01 Aug - 31 Aug 2025",
+    label: "Special for you",
   },
 ];
