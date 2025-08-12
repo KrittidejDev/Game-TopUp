@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FooterStyles } from "./styled";
+import { FooterStyles } from "./styled"; // 
 
 const FOOTER_MENU = [
   { label: "Home", routePath: "/" },
@@ -11,24 +11,36 @@ const FOOTER_MENU = [
   { label: "Bonus", routePath: "/bonus" },
 ];
 
-export default function Footer() {
+export default function FooterWidget() {
   return (
     <FooterStyles>
       <div className="inner">
-        {/* Top row */}
+        {/* ===== TOP ===== */}
         <div className="top">
           <div className="left">
-            <Link className="logo" href="/">
-              <img src="/images/footer/logo.png" alt="FUADSHOP" />
+            <Link href="/" className="logo">
+              <img
+                src="/images/footer/logo.png"
+                alt="FUADSHOP"
+                className="logo_img"
+              />
             </Link>
 
-            <nav className="footer-menu">
+            <nav className="footer_menu">
               {FOOTER_MENU.map((item) => (
-                <Link key={item.routePath} href={item.routePath}>
+                <Link
+                  key={item.routePath}
+                  href={item.routePath}
+                  className="footer_menu_link"
+                >
                   {item.label}
                 </Link>
               ))}
             </nav>
+
+            <p className="muted">
+              2568 บมจ.โทเทิ่ล แอ็คเซ็ส คอมมูนิเคชั่น บริษัทในกลุ่มเทเลนอร์ | Operated by dtac
+            </p>
           </div>
 
           <div className="right">
@@ -50,13 +62,15 @@ export default function Footer() {
           </div>
         </div>
 
+
         <div className="bottom">
-          <div className="company-info">
-            2568 บมจ.โทเทิ่ล แอ็คเซ็ส คอมมูนิเคชั่น บริษัทในกลุ่มเทเลนอร์ | Operated by dtac
-          </div>
           <div className="policy">
-            <Link href="/terms">เงื่อนไขการใช้งาน</Link>
-            <Link href="/privacy">นโยบายความเป็นส่วนตัว</Link>
+            <Link href="/terms" className="policy_link">
+              เงื่อนไขการใช้งาน
+            </Link>
+            <Link href="/privacy" className="policy_link">
+              นโยบายความเป็นส่วนตัว
+            </Link>
           </div>
         </div>
       </div>
