@@ -1,7 +1,7 @@
-// import BgStandard from "./BgStandard";
+import BgStandard from "./BgStandard";
 
 const EXPORT = {
-//   BgStandard,
+  BgStandard,
 };
 
 export default EXPORT;

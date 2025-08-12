@@ -6,9 +6,9 @@ import { PromotionWidget } from "@/widgets/PromotionWidget";
 
 export default function Home() {
   return (
-    <Mainlayouts.NavAndFooter>
+    <Mainlayouts.NavAndFooterWithBanner>
       <CardsWidget />
       <PromotionWidget />
-    </Mainlayouts.NavAndFooter>
+    </Mainlayouts.NavAndFooterWithBanner>
   );
 }

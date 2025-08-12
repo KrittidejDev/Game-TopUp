@@ -3,25 +3,146 @@ import styled from "styled-components";
 export const BannerWidgetContainer = styled.div`
   position: relative;
   width: 100%;
-  background-color: ${({ theme }) => theme.COLORS.BLACK_2};
+  background-color: ${({ theme }) => theme.COLORS.BLACK_3};
   box-sizing: border-box;
   overflow: hidden;
   .banner_item {
+    margin-bottom: 40px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
-    max-height: 720px;
-    /* aspect-ratio: 12 / 5; */
-    .banner_img {
+    max-height: 450px;
+    aspect-ratio: 3.84/1;
+    background-color: ${({ theme }) => theme.COLORS.BLACK_3};
+    .row_left {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      .banner_image {
+        border: none;
+        object-fit: contain;
+      }
+    }
+    .row_right {
+      position: relative;
+      padding: 20px;
+      height: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .pay_bar_wrap {
+        margin-bottom: 12px;
+        display: flex;
+        column-gap: 16px;
+        .pay_bar {
+          border: 1px solid ${({ theme }) => theme.COLORS.BLUE_1};
+          border-radius: 4px;
+          padding: 5px 13px;
+          color: ${({ theme }) => theme.COLORS.BLUE_1};
+          font-size: ${({ theme }) => theme.FONTS.SIZES.S16};
+          font-weight: ${({ theme }) => theme.FONTS.WEIGHTS.REGULAR};
+          white-space: nowrap;
+        }
+      }
+      .title {
+        margin-bottom: 8px;
+        line-height: 44px;
+        color: ${({ theme }) => theme.COLORS.YELLOW_1};
+        font-size: ${({ theme }) => theme.FONTS.SIZES.S42};
+        font-weight: ${({ theme }) => theme.FONTS.WEIGHTS.BOLD};
+      }
+      .sub_title {
+        margin-bottom: 8px;
+        color: ${({ theme }) => theme.COLORS.WHITE_1};
+        font-size: ${({ theme }) => theme.FONTS.SIZES.S28};
+        font-weight: ${({ theme }) => theme.FONTS.WEIGHTS.BOLD};
+      }
+    }
+    .desc {
+      margin-bottom: 8px;
+      color: ${({ theme }) => theme.COLORS.WHITE_1};
+      font-size: ${({ theme }) => theme.FONTS.SIZES.S20};
+      font-weight: ${({ theme }) => theme.FONTS.WEIGHTS.REGULAR};
+    }
+    .btn_wrap {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  /* Navigation Arrows */
+  .banner_navigation {
+    .banner_arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-50%) scale(1.1);
+      }
+
+      /* Previous Arrow */
+      &.banner_arrow_prev {
+        left: 5px;
+      }
+
+      /* Next Arrow */
+      &.banner_arrow_next {
+        right: 5px;
+      }
+    }
+  }
+
+  /* Pagination Dots */
+  .banner_pagination {
+    position: absolute !important;
+    bottom: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 10;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px;
+    width: auto !important;
+
+    /* Pagination Bullets */
+    .swiper-pagination-bullet {
+      width: 12px !important;
+      height: 12px !important;
+      background: ${({ theme }) => `${theme.COLORS.WHITE_1}80`} !important;
+      border-radius: 50% !important;
+      opacity: 1 !important;
+      transition: all 0.3s ease !important;
+      margin: 0 4px !important;
+
+      /* Active Bullet */
+      &.swiper-pagination-bullet-active {
+        background: ${({ theme }) => theme.COLORS.WHITE_1} !important;
+      }
+    }
+  }
+
+  /* .banner_img {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       width: 100%;
+      height: 100%;
       background-repeat: no-repeat;
+      object-position: center;
+      object-fit: fill;
     }
     .bn_content_block {
       padding: 46px 0 128px 0;
@@ -68,182 +189,5 @@ export const BannerWidgetContainer = styled.div`
         justify-content: center;
         box-sizing: border-box;
       }
-    }
-  }
-
-  /* @media (max-width: 1280px) {
-    .mySwiper {
-      .banner_item {
-        .bn_content_block {
-          .bn_label_p1 {
-            line-height: 120px;
-            margin-bottom: 10px;
-            font-size: ${({ theme }) => theme.FONTS.SIZES.S108};
-            .bn_underline {
-              height: 8px;
-            }
-          }
-        }
-        .bnp2p3_block {
-          line-height: 70px;
-          .bn_label_p2 {
-            font-size: ${({ theme }) => theme.FONTS.SIZES.S54};
-          }
-          .bn_label_p3 {
-            font-size: ${({ theme }) => theme.FONTS.SIZES.S54};
-          }
-        }
-        .bn_label_p4 {
-          margin-bottom: 50px;
-          font-size: ${({ theme }) => theme.FONTS.SIZES.S30};
-        }
-        .bn_label_p5 {
-          font-size: ${({ theme }) => theme.FONTS.SIZES.S30};
-          .bn_underline_p5 {
-            height: 4px;
-          }
-        }
-      }
-    }
-  }
-  @media (max-width: ${({ theme }) => theme.SCREENS.LAPTOP}) {
-    .mySwiper {
-      .banner_item {
-        .bn_content_block {
-          .bn_label_p1 {
-            line-height: 100px;
-            margin-bottom: 8px;
-            font-size: ${({ theme }) => theme.FONTS.SIZES.S86};
-            .bn_underline {
-              height: 6px;
-            }
-          }
-        }
-        .bnp2p3_block {
-          line-height: 60px;
-          .bn_label_p2 {
-            font-size: ${({ theme }) => theme.FONTS.SIZES.S45};
-          }
-          .bn_label_p3 {
-            font-size: ${({ theme }) => theme.FONTS.SIZES.S45};
-          }
-        }
-        .bn_label_p4 {
-          margin-bottom: 40px;
-          font-size: ${({ theme }) => theme.FONTS.SIZES.S24};
-        }
-        .bn_label_p5 {
-          font-size: ${({ theme }) => theme.FONTS.SIZES.S24};
-          .bn_underline_p5 {
-            height: 4px;
-          }
-        }
-      }
-    }
-  }
-  @media (max-width: ${({ theme }) => theme.SCREENS.TABLET}) {
-    .mySwiper {
-      .banner_item {
-        .bn_content_block {
-          .bn_label_p1 {
-            line-height: 80px;
-            margin-bottom: 8px;
-            font-size: ${({ theme }) => theme.FONTS.SIZES.S70};
-            .bn_underline {
-              height: 4px;
-            }
-          }
-        }
-        .bnp2p3_block {
-          line-height: 50px;
-          .bn_label_p2 {
-            font-size: ${({ theme }) => theme.FONTS.SIZES.S35};
-          }
-          .bn_label_p3 {
-            font-size: ${({ theme }) => theme.FONTS.SIZES.S35};
-          }
-        }
-        .bn_label_p4 {
-          margin-bottom: 30px;
-          font-size: ${({ theme }) => theme.FONTS.SIZES.S20};
-        }
-        .bn_label_p5 {
-          font-size: ${({ theme }) => theme.FONTS.SIZES.S20};
-          .bn_underline_p5 {
-            height: 4px;
-          }
-        }
-      }
-    }
-  }
-  @media (max-width: 620px) {
-    .mySwiper {
-      .banner_item {
-        .bn_content_block {
-          .bn_label_p1 {
-            line-height: 60px;
-            margin-bottom: 8px;
-            font-size: ${({ theme }) => theme.FONTS.SIZES.S58};
-            .bn_underline {
-              height: 4px;
-            }
-          }
-        }
-        .bnp2p3_block {
-          line-height: 30px;
-          .bn_label_p2 {
-            font-size: ${({ theme }) => theme.FONTS.SIZES.S26};
-          }
-          .bn_label_p3 {
-            font-size: ${({ theme }) => theme.FONTS.SIZES.S26};
-          }
-        }
-        .bn_label_p4 {
-          margin-bottom: 30px;
-          font-size: ${({ theme }) => theme.FONTS.SIZES.S15};
-        }
-        .bn_label_p5 {
-          font-size: ${({ theme }) => theme.FONTS.SIZES.S15};
-          .bn_underline_p5 {
-            height: 4px;
-          }
-        }
-      }
-    }
-  }
-  @media (max-width: ${({ theme }) => theme.SCREENS.MOBILE}) {
-    .mySwiper {
-      .banner_item {
-        .bn_content_block {
-          .bn_label_p1 {
-            line-height: 46px;
-            margin-bottom: 8px;
-            font-size: ${({ theme }) => theme.FONTS.SIZES.S40};
-            .bn_underline {
-              height: 2px;
-            }
-          }
-        }
-        .bnp2p3_block {
-          line-height: 20px;
-          .bn_label_p2 {
-            font-size: ${({ theme }) => theme.FONTS.SIZES.S18};
-          }
-          .bn_label_p3 {
-            font-size: ${({ theme }) => theme.FONTS.SIZES.S18};
-          }
-        }
-        .bn_label_p4 {
-          margin-bottom: 10px;
-          font-size: ${({ theme }) => theme.FONTS.SIZES.S12};
-        }
-        .bn_label_p5 {
-          font-size: ${({ theme }) => theme.FONTS.SIZES.S12};
-          .bn_underline_p5 {
-            height: 2px;
-          }
-        }
-      }
-    }
-  } */
+    } */
 `;

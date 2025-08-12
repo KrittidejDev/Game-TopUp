@@ -16,9 +16,10 @@ export const NavbarWidgetStyles = styled.div`
     justify-content: space-between;
   }
   .nav_menu_list {
-    max-width: 40%;
+    max-width: 60%;
     flex: 1;
     display: flex;
+    column-gap: 24px;
     align-items: center;
     justify-content: space-between;
     .menu_item {
@@ -29,6 +30,7 @@ export const NavbarWidgetStyles = styled.div`
       color: ${({ theme }) => theme.COLORS.GRAY_1};
       font-size: ${({ theme }) => theme.FONTS.SIZES.S20};
       font-weight: ${({ theme }) => theme.FONTS.WEIGHTS.MEDIUM};
+      white-space: nowrap;
       &:hover {
         color: ${({ theme }) => theme.COLORS.ORANGE_1};
       }
