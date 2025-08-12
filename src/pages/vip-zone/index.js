@@ -4,11 +4,8 @@ import { Mainlayouts } from "@/components";
 
 const VipZone = () => {
   return (
-    <Mainlayouts.NavAndFooter>
+    <Mainlayouts.NavAndFooterWithBanner>
       <VipZoneContainer>
-        <div className="vip_zone_banner">
-            {/* <img src="/images/vip-zone/AdsImg.png" alt="vip-zone" /> */}
-        </div>
         <div className="vip_zone">
           <div className="vip_zone_header">
             <div className="vip_zone_logo">
@@ -57,7 +54,7 @@ const VipZone = () => {
           </div>
         </div>
       </VipZoneContainer>
-    </Mainlayouts.NavAndFooter>
+    </Mainlayouts.NavAndFooterWithBanner>
   );
 };
 
