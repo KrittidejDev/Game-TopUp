@@ -3,18 +3,18 @@ import styled from "styled-components";
 export const PromotionCardWrap = styled.div`
     width: 100vw;
 
-        .promotionCardContainer {
+        .promotion_card_container {
             display: flex;
             flex-direction: column;
             padding: 12px;
 
-                img {
+                .promotion_card_img {
                 width: 374px;
                 height: 187px;
                 background-color: #ffffff;
         }
 
-            .labelContainer {
+            .label_container {
                 width: 374px;
                 height: fit-content;
                 display: flex;
@@ -23,20 +23,20 @@ export const PromotionCardWrap = styled.div`
                 gap: 8px;
                 margin: 8px 0;
 
-                    .dateStyle {
+                    .date_style {
                         background-color: rgba(255, 255, 255, 0.2);
                         padding: 4px 12px;
                         border-radius: 12px;
                     }
 
-                    .labelStyle {
+                    .label_style {
                         background-color: #DFA50E;
                         padding: 4px 12px;
                         border-radius: 4px;
                     }
             }
 
-            a {
+            .promotion_title {
                 width: fit-content;
                 color: #ffffff;
                 font-size: 20px;

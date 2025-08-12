@@ -1,5 +1,5 @@
 import { PromotionContainer } from "./styled";
-import { MOCKUP_PROMOTION_CARD } from "@/utils/dataMockup/promotionCardData";
+import { MOCKUP_PROMOTION_BANNER } from "@/utils/dataMockup/promotionCardData";
 import { Cards } from "@/components";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -8,7 +8,10 @@ import { useState } from "react";
 
 export function PromotionWidget() {
     const router = useRouter();
-    const currentPath = router.pathname;
+
+    const _handleClickPromotion = (id) => {
+        router.push(`/promotion/${id}`);
+    }
 
     return (
         <PromotionContainer>
@@ -20,8 +23,8 @@ export function PromotionWidget() {
                 </Link>
             </div>
             <div className="promotion_card_wrap">
-            {MOCKUP_PROMOTION_CARD && MOCKUP_PROMOTION_CARD.map((e) => {
-                return <div className="promotion_cards" key={e.id}><Cards.PromotionCard data={e} /></div>
+            {MOCKUP_PROMOTION_BANNER && MOCKUP_PROMOTION_BANNER.slice(0, 6).map((e) => {
+                return <div className="promotion_cards" key={e.id} onClick={() => _handleClickPromotion(e.id)}><Cards.PromotionCard data={e} /></div>
             })}</div>
         </div>
         </PromotionContainer>
