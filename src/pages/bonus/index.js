@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Mainlayouts } from "@/components";
-import { BonusContainer } from "./styled";
+import { Bonus_container } from "./styled";
 
 const HOW_TO_USE = [
   "100 GN Coin แลกส่วนลด 10 บาท",
@@ -14,12 +14,10 @@ const HOW_TO_USE = [
 export default function Bonus() {
   return (
     <Mainlayouts.NavAndFooter>
-      <BonusContainer>
-       
+      <Bonus_container>
         <div className="banner">
           <img src="/images/bonus/bonuspromo.png" alt="โบนัสพิเศษ" />
         </div>
-
 
         <section className="content">
           <div className="col">
@@ -48,7 +46,7 @@ export default function Bonus() {
             </p>
           </div>
         </section>
-      </BonusContainer>
+      </Bonus_container>
     </Mainlayouts.NavAndFooter>
   );
 }
