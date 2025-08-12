@@ -1,4 +1,4 @@
-import { Forms, Mainlayouts } from "@/components";
+import { Buttons, Forms, Mainlayouts } from "@/components";
 import React, { useState } from "react";
 import { LoginContainer } from "./styled";
 import { useRouter } from "next/router";
@@ -32,11 +32,21 @@ const Login = () => {
     router.push("/");
   };
 
+  const _handleClickRegister = () => {
+    router.push("/me/register");
+  };
+
   return (
     <Mainlayouts.NavAndFooterWithBanner>
       <LoginContainer>
         {!_otpStep && <Forms.LoginForm onSubmit={_handleSubmit} />}
         {_otpStep && <Forms.OTPLoginForm onSubmit={_handleSubmitOtpLogin} />}
+        <div style={{ margin: "50px", color: "#000" }}>
+          <Buttons.BgStandard
+            label={"ลงทำเบียน ยังไม่ได้แต่งเอาไปกดเล่นกันก่อน"}
+            onClick={_handleClickRegister}
+          />
+        </div>
       </LoginContainer>
     </Mainlayouts.NavAndFooterWithBanner>
   );
