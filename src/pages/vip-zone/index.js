@@ -38,8 +38,8 @@ const VipZone = () => {
             <div className="vip_zone_levels">
               <div className="vip_zone_levels_title">ระดับของเหล่านักเติม</div>
               <div className="vip_levels">
-                {memberships.map((item, index) => (
-              <div key={index} className="vip_level">
+                {memberShips.map((item) => (
+              <div key={item.id} className="vip_level">
                 <img src={item.img} alt={item.text} />
                 <span>{item.text}</span>
                 <span>{item.price}</span>
@@ -52,7 +52,7 @@ const VipZone = () => {
             <p>เงื่อนไขและข้อตกลง</p>
             <ul className="terms_conditions">
             {termsData.map((term, index) => (
-              <li key={index} className="text-gray-700 leading-relaxed">
+              <li key={index} className="terms_condition">
                 {term}
               </li>
               ))}
@@ -80,23 +80,27 @@ const termsData = [
     "บริษัทฯ ขอสงวนสิทธิ์ในการเปลี่ยนแปลงคุณสมบัติของผู้ได้รับสิทธิ์รวมถึงการเปลี่ยนแปลง แก้ไข หรือยกเลิกบริการหรือสิทธิพิเศษโดยไม่ต้องแจ้งให้ทราบล่วงหน้า"
   ];
 
-const memberships = [
+const memberShips = [
     {
+      id: 1,
       img: "/images/vip-zone/Bronze.svg",
       text: "Bronze Member",
       price: "600 THB"
     },
     {
+      id: 2,
       img: "/images/vip-zone/Silver.svg",
       text: "Silver Member",
       price: "3,000 THB"
     },
     {
+      id: 3,
       img: "/images/vip-zone/Gold.svg",
       text: "Gold Member",
       price: "10,000 THB"
     },
     {
+      id: 4,
       img: "/images/vip-zone/UltimateBlack.svg",
       text: "Ultimate Black Member",
       price: "30,000 THB"
