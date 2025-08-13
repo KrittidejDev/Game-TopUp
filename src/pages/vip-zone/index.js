@@ -52,7 +52,7 @@ const VipZone = () => {
             <p>เงื่อนไขและข้อตกลง</p>
             <ul className="terms_conditions">
             {termsData.map((term, index) => (
-              <li key={index} className="text-gray-700 leading-relaxed">
+              <li key={index} className="terms_condition">
                 {term}
               </li>
               ))}
