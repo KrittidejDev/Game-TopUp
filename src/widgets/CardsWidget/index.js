@@ -1,10 +1,22 @@
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import { CardsWidgetContainer } from "./styled";
 import { Cards } from "@/components";
-import { MOCK_CARD_GAME } from "@/utils/mockupData/mockup";
+import { Buttons } from "@/components"
+import { MOCK_CARD_GAME } from "@/utils/dataMockup/cardMockup";
+import { useRouter } from "next/router";
 
 const CardsWidget = () => {
   const [_filterBtnActice, _setFilterBtnActive] = useState(1);
+
+  const router = useRouter();
+
+  const _handleClickGame = (id) => {
+    router.push(`/purchase/${id}`);
+  }
+
+  const _handleViewMore = () => {
+    router.push(`/game`);
+  }
 
   return (
     <CardsWidgetContainer>
@@ -45,7 +57,7 @@ const CardsWidget = () => {
         <div className="card_wrap">
           {MOCK_CARD_GAME && MOCK_CARD_GAME.map((e, i) => (
             <div className="card_item" key={i}>
-              <Cards.CardsGame data={e} />
+              <div className="card_game_link" key={e.id} onClick={() => _handleClickGame(e.id)}><Cards.CardsGame data={e} /></div>
             </div>
           ))}
         </div>
@@ -80,7 +92,7 @@ const CardsWidget = () => {
           ))}
         </div>
       )}
-      <div className="more_games">More games <img src="/images/icons/Home/more-games.png" width="12px" height="12px" alt="More games" /></div>
+      <Buttons.MoreGame onClickView={_handleViewMore}/>
     </CardsWidgetContainer>
   );
 };
