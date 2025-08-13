@@ -1,22 +1,22 @@
 import styled from "styled-components";
 export const FooterStyles = styled.footer`
-  background: ${({ theme }) => theme.COLORS.BLACK_2};
+  background: ${({ theme }) => theme.COLORS.BLACK_3};
   color: ${({ theme }) => theme.COLORS.WHITE_1};
   padding: 28px 0 0;
+  width: 100%;
 
   .inner {
-    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
-
     .top {
+      margin-bottom: 20px;
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 32px;
-      margin-bottom: 20px;
 
       .left {
         flex: 1 1 auto;
@@ -44,6 +44,9 @@ export const FooterStyles = styled.footer`
             text-decoration: none;
             font-weight: 600;
             white-space: nowrap;
+            &:hover {
+              color: ${({ theme }) => theme.COLORS.ORANGE_1};
+            }
           }
         }
 
@@ -82,20 +85,20 @@ export const FooterStyles = styled.footer`
             white-space: nowrap;
             font-size: 14px;
 
-            &:hover { opacity: .92; }
+            &:hover {
+              opacity: 0.92;
+              background: ${({ theme }) => theme.COLORS.ORANGE_1};
+            }
           }
         }
 
-        
         .call {
           display: flex;
-          align-items: baseline;   
+          align-items: baseline;
           gap: 4px;
           white-space: nowrap;
           flex-direction: column;
           color: ${({ theme }) => theme.COLORS.WHITE_1};
-  
-  
 
           .label {
             color: ${({ theme }) => theme.COLORS.WHITE_1};
@@ -131,6 +134,9 @@ export const FooterStyles = styled.footer`
           font-weight: 500;
           white-space: nowrap;
           font-size: 14px;
+          &:hover {
+            color: ${({ theme }) => theme.COLORS.ORANGE_1};
+          }
         }
       }
     }
@@ -149,25 +155,37 @@ export const FooterStyles = styled.footer`
           align-items: center;
         }
       }
-      .bottom { justify-content: flex-end; }
+      .bottom {
+        justify-content: flex-end;
+      }
     }
   }
 
   @media (max-width: 640px) {
     .inner {
       .top {
-        .left { .footer_menu { gap: 12px 18px; } }
+        .left {
+          .footer_menu {
+            gap: 12px 18px;
+          }
+        }
 
         .right {
           flex-direction: column;
           gap: 16px;
           align-items: flex-start;
 
-          .call .number { font-size: 28px; }
+          .call .number {
+            font-size: 28px;
+          }
         }
       }
 
-      .bottom { .policy { gap: 20px; } }
+      .bottom {
+        .policy {
+          gap: 20px;
+        }
+      }
     }
   }
 `;

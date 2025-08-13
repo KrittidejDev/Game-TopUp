@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FooterStyles } from "./styled"; // 
+import { FooterStyles } from "./styled"; //
 
 const FOOTER_MENU = [
   { label: "Home", routePath: "/" },
@@ -39,18 +39,29 @@ export default function FooterWidget() {
             </nav>
 
             <p className="muted">
-              2568 บมจ.โทเทิ่ล แอ็คเซ็ส คอมมูนิเคชั่น บริษัทในกลุ่มเทเลนอร์ | Operated by dtac
+              2568 บมจ.โทเทิ่ล แอ็คเซ็ส คอมมูนิเคชั่น บริษัทในกลุ่มเทเลนอร์ |
+              Operated by dtac
             </p>
           </div>
 
           <div className="right">
             <div className="actions">
               <button type="button" className="btn">
-                <img src="/images/footer/facebookicon.png" alt="" width={16} height={16} />
+                <img
+                  src="/images/footer/facebookicon.png"
+                  alt=""
+                  width={16}
+                  height={16}
+                />
                 ติดตามข่าวสาร
               </button>
               <button type="button" className="btn">
-                <img src="/images/footer/callicon.png" alt="" width={16} height={16} />
+                <img
+                  src="/images/footer/callicon.png"
+                  alt=""
+                  width={16}
+                  height={16}
+                />
                 แจ้งเหตุขัดข้อง
               </button>
             </div>
@@ -61,7 +72,6 @@ export default function FooterWidget() {
             </div>
           </div>
         </div>
-
 
         <div className="bottom">
           <div className="policy">
