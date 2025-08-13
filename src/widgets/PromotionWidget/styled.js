@@ -34,6 +34,16 @@ export const PromotionContainer = styled.div`
         display: flex;
         align-items: center;
         border-right: 2px solid #0286ff;
+        cursor: pointer;
+
+        &:hover {
+          scale: 110%;
+          transition: 0.3s;
+        }
+        &:hover::before {
+          opacity: 1;
+          transform: rotate(-45deg) translateY(100%);
+        }
       }
     }
 
@@ -46,6 +56,16 @@ export const PromotionContainer = styled.div`
         display: flex;
         width: 400px;
         height: 309px;
+        cursor: pointer;
+
+        &:hover {
+          scale: 105%;
+          transition: 0.3s;
+        }
+        &:hover::before {
+          opacity: 1;
+          transform: rotate(-45deg) translateY(100%);
+        }
       }
     }
   }
