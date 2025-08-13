@@ -5,6 +5,8 @@ import Avatar from "./Avatar";
 import Checkbox from "./Checkbox";
 import Clock from "./Clock";
 import NavbarIcon from "./NavbarIcon";
+import Network from "./Network";
+import Calender from "./Calender";
 
 const EXPORT = {
   //   BgStandard,
@@ -14,6 +16,8 @@ const EXPORT = {
   Checkbox,
   Clock,
   NavbarIcon,
+  Network,
+  Calender,
 };
 
 export default EXPORT;

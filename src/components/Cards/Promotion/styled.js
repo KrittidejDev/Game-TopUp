@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const PromotionCardWrap = styled.div`
     width: 100vw;
+    cursor: pointer;
 
         .promotion_card_container {
             display: flex;
