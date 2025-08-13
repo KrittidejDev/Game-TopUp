@@ -38,8 +38,8 @@ const VipZone = () => {
             <div className="vip_zone_levels">
               <div className="vip_zone_levels_title">ระดับของเหล่านักเติม</div>
               <div className="vip_levels">
-                {memberships.map((item, index) => (
-              <div key={index} className="vip_level">
+                {memberships.map((item) => (
+              <div key={item.id} className="vip_level">
                 <img src={item.img} alt={item.text} />
                 <span>{item.text}</span>
                 <span>{item.price}</span>
@@ -82,21 +82,25 @@ const termsData = [
 
 const memberships = [
     {
+      id: 1,
       img: "/images/vip-zone/Bronze.svg",
       text: "Bronze Member",
       price: "600 THB"
     },
     {
+      id: 2,
       img: "/images/vip-zone/Silver.svg",
       text: "Silver Member",
       price: "3,000 THB"
     },
     {
+      id: 3,
       img: "/images/vip-zone/Gold.svg",
       text: "Gold Member",
       price: "10,000 THB"
     },
     {
+      id: 4,
       img: "/images/vip-zone/UltimateBlack.svg",
       text: "Ultimate Black Member",
       price: "30,000 THB"
