@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const PromotionContainer = styled.div`
   padding: 80px 0;
-  width: 100%
+  width: 100%;
   max-width: 1200px;
-  
-    .promotion_page_title {
-      font-size: 40px;
-    }
+
+  .promotion_page_title {
+    font-size: 40px;
+  }
 `;
 
 export const PromotionTabsContainer = styled.div`
@@ -41,6 +41,16 @@ export const PromotionTabsContainer = styled.div`
       display: flex;
       width: 400px;
       height: 309px;
+      cursor: pointer;
+
+      &:hover {
+        scale: 105%;
+        transition: 0.3s;
+      }
+      &:hover::before {
+        opacity: 1;
+        transform: rotate(-45deg) translateY(100%);
+      }
     }
   }
 
