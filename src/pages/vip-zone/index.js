@@ -11,34 +11,40 @@ const VipZone = () => {
             <div className="vip_zone_logo">
               <img src="/images/vip-zone/GameNation.png" alt="vip-zone"></img>
             </div>
-             <h1> เปิดตัวแล้วกับ Gaming Nation VIP </h1>
+            <div className="vip_zone_line">
+              <div className="vip_zone_title"> เปิดตัวแล้วกับ Gaming Nation  </div>
+              <div className="vip_zone_subtitle">VIP</div>
+            </div>
           </div>
           <div className="vip_zone_content"> 
-            <p>
+            <div className="vip_zone_content_title">
               <span >เติมเกมสนุกยิ่งขี้น คุ้มกว่าเดิม!!</span>
-            </p>
-            <p>
+            </div>
+            <div className="vip_zone_content_subtitle">
               เติมเกมสนุกยิ่งขึ้น คุ้มกว่าเดิม!! เพียงเติมเกมครบ 600 บาท ใน 6 เดือน รับรางวัลพิเศษมากมาย
-            </p>
+            </div>
           </div>
           <div className="vip_zone_main">
             <div className="top_up_privileges">
-              <h2>สิทธิพิเศษต่างๆของเหล่านักเติม</h2>
+              <div className="top_up_privileges_title">สิทธิพิเศษต่างๆของเหล่านักเติม</div>
               {/* <Privileges /> */}
             </div>
             <div className="vip_zone_benefits">
-              <h2>สิทธิพิเศษตามเงื่อนไขการใช้งาน</h2>
-              <p>
+              <div className="vip_zone_benefits_title">สิทธิพิเศษตามเงื่อนไขการใช้งาน</div>
+              <div className="vip_zone_benefits_subtitle">
                 ยิ่งเติมมาก ยิ่งได้มาก สิทธิพิเศษตามยอดสะสมที่มากขึ้นยิ่งได้รับความคุ้มค่าในทุกการใช้จ่าย
-              </p>
+              </div>
             </div>
             <div className="vip_zone_levels">
-              <h2>ระดับของเหล่านักเติม</h2>
+              <div className="vip_zone_levels_title">ระดับของเหล่านักเติม</div>
               <div className="vip_levels">
-                <div> Bronze </div>
-                <div> Silver </div>
-                <div> Gold</div>
-                <div> Ultimate Black Member</div>
+                {memberships.map((item, index) => (
+              <div key={index} className="vip_level">
+                <img src={item.img} alt={item.text} />
+                <span>{item.text}</span>
+                <span>{item.price}</span>
+              </div>
+      ))}
               </div>
             </div>
           </div>
@@ -72,5 +78,28 @@ const termsData = [
     "สิทธิพิเศษต่างๆจะสิ้นสุดตามระยะเวลาที่บริษัทกำหนด",
     "ลูกค้าสามารถใช้สิทธิ์ได้ตามเงื่อนไขและสถานที่ที่บริษัทได้ระบุไว้เท่านั้น",
     "บริษัทฯ ขอสงวนสิทธิ์ในการเปลี่ยนแปลงคุณสมบัติของผู้ได้รับสิทธิ์รวมถึงการเปลี่ยนแปลง แก้ไข หรือยกเลิกบริการหรือสิทธิพิเศษโดยไม่ต้องแจ้งให้ทราบล่วงหน้า"
+  ];
+
+const memberships = [
+    {
+      img: "/images/vip-zone/Bronze.svg",
+      text: "Bronze Member",
+      price: "600 THB"
+    },
+    {
+      img: "/images/vip-zone/Silver.svg",
+      text: "Silver Member",
+      price: "3,000 THB"
+    },
+    {
+      img: "/images/vip-zone/Gold.svg",
+      text: "Gold Member",
+      price: "10,000 THB"
+    },
+    {
+      img: "/images/vip-zone/UltimateBlack.svg",
+      text: "Ultimate Black Member",
+      price: "30,000 THB"
+    }
   ];
 export default VipZone;
