@@ -17,7 +17,7 @@ function PromotionTabs() {
   };
 
   return (
-    <Mainlayouts.NavAndFooter>
+    <Mainlayouts.NavAndFooterWithBanner>
       <PromotionContainer>
         <h1 className="promotion_page_title">โปรโมชั่น</h1>
         <PromotionTabsContainer>
@@ -58,7 +58,7 @@ function PromotionTabs() {
           </div>
         </PromotionTabsContainer>
       </PromotionContainer>
-    </Mainlayouts.NavAndFooter>
+    </Mainlayouts.NavAndFooterWithBanner>
   );
 }
 
