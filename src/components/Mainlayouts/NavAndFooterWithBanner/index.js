@@ -8,7 +8,7 @@ const NavAndFooterWithBanner = ({ children }) => {
     <NavAndFooterWithBannerStyles>
       <NavbarWidget />
       <BannerWidget />
-      {children}
+      <div className="content_container">{children}</div>
       <FooterWidget />
     </NavAndFooterWithBannerStyles>
   );

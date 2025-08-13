@@ -1,9 +1,12 @@
-import React from 'react'
+import { Mainlayouts } from "@/components";
+import React from "react";
 
 const PromotionDetails = () => {
   return (
-    <div>PromotionDetails</div>
-  )
-}
+    <Mainlayouts.NavAndFooterWithBanner>
+      <div>PromotionDetails</div>
+    </Mainlayouts.NavAndFooterWithBanner>
+  );
+};
 
-export default PromotionDetails
+export default PromotionDetails;

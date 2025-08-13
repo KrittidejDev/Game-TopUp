@@ -4,9 +4,9 @@ import { Mainlayouts } from "@/components";
 
 const ProductDetail = () => {
   return (
-    <Mainlayouts.NavAndFooter>
+    <Mainlayouts.NavAndFooterWithBanner>
       <ProductDetailContainer>ProductDetail</ProductDetailContainer>
-    </Mainlayouts.NavAndFooter>
+    </Mainlayouts.NavAndFooterWithBanner>
   );
 };
 
