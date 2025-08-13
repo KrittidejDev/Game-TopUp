@@ -38,7 +38,7 @@ const VipZone = () => {
             <div className="vip_zone_levels">
               <div className="vip_zone_levels_title">ระดับของเหล่านักเติม</div>
               <div className="vip_levels">
-                {memberships.map((item) => (
+                {memberShips.map((item) => (
               <div key={item.id} className="vip_level">
                 <img src={item.img} alt={item.text} />
                 <span>{item.text}</span>
@@ -80,7 +80,7 @@ const termsData = [
     "บริษัทฯ ขอสงวนสิทธิ์ในการเปลี่ยนแปลงคุณสมบัติของผู้ได้รับสิทธิ์รวมถึงการเปลี่ยนแปลง แก้ไข หรือยกเลิกบริการหรือสิทธิพิเศษโดยไม่ต้องแจ้งให้ทราบล่วงหน้า"
   ];
 
-const memberships = [
+const memberShips = [
     {
       id: 1,
       img: "/images/vip-zone/Bronze.svg",
