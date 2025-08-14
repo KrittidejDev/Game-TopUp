@@ -9,7 +9,7 @@ const FOOTER_MENU = [
   { label: "VIP Zone", routePath: "/vip-zone" },
   { label: "About Us", routePath: "/about-us" },
   { label: "Bonus", routePath: "/bonus" },
-  { label: "Terms of Service", routePath: "/terms-of-service" },
+  { label: "Terms of Service", routePath: "/me/terms-of-service" }, 
 ];
 
 export default function FooterWidget() {
