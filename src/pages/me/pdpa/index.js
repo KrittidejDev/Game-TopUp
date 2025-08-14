@@ -18,15 +18,15 @@ const PdpaPage = () => {
         
         {/* Main Title */}
         <h1 className="pdpa_title">
-          {PDPA_CONTENT.intro.title}
+          {_PDPA_CONTENT.intro.title}
         </h1>
         <p className="pdpa_intro_paragraph">
-          {PDPA_CONTENT.intro.content}
+          {_PDPA_CONTENT.intro.content}
         </p>
 
         {/* Dynamic sections */}
         <div className="pdpa_section_wrapper">
-          {PDPA_CONTENT.sections.map((section, index) => (
+          {_PDPA_CONTENT.sections.map((section, index) => (
             <div key={index} className="pdpa_section">
               {/* Section Title */}
               <div className="pdpa_section_title_wrapper">
@@ -109,7 +109,7 @@ const PdpaPage = () => {
 
         {/* Last updated date */}
         <div className="pdpa_last_updated">
-          {PDPA_CONTENT.lastUpdated}
+          {_PDPA_CONTENT.lastUpdated}
         </div>
       </div>
     </div>
@@ -118,7 +118,7 @@ const PdpaPage = () => {
   );
 };
 
-const PDPA_CONTENT = {
+const _PDPA_CONTENT = {
   title: "นโยบายความเป็นส่วนตัว",
   intro: {
     title: "นโยบายความเป็นส่วนตัว",
