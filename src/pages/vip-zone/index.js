@@ -38,7 +38,7 @@ const VipZone = () => {
             <div className="vip_zone_levels">
               <div className="vip_zone_levels_title">ระดับของเหล่านักเติม</div>
               <div className="vip_levels">
-                {memberShips.map((item) => (
+                {MEMBERSHIP.map((item) => (
               <div key={item.id} className="vip_level">
                 <img src={item.img} alt={item.text} />
                 <span>{item.text}</span>
@@ -51,7 +51,7 @@ const VipZone = () => {
           <div className="vip_zone_footer">
             <p>เงื่อนไขและข้อตกลง</p>
             <ul className="terms_conditions">
-            {termsData.map((term, index) => (
+            {TERMS_DATA.map((term, index) => (
               <li key={index} className="terms_condition">
                 {term}
               </li>
@@ -64,7 +64,7 @@ const VipZone = () => {
   );
 };
 
-const termsData = [
+const TERMS_DATA = [
     "สำหรับลูกค้า Gaming Nation ที่ใช้บริการในนามบุคคลธรรมดาเท่านั้น",
     "ลูกค้าที่มีประวัติการใช้งานโค้ดส่วนลดสำหรับตัวแทนจำหน่ายจะไม่สามารถเข้าร่วม Gaming Nation VIP ได้",
     "ลูกค้าจะได้รับสิทธิพิเศษเป็น Bronze Member, Silver Member, Gold Member และ Ultimate Black Member เมื่อมียอดเติมเกมสะสมครบ 600, 3000, 10000 และ 30000 บาท ในระยะเวลา 6 เดือน โดยคำนวณจาก ระหว่างวันที่ 1 ม.ค. – 30 มิ.ย. 66 เพื่อรับสิทธิ พิเศษ ระหว่างวันที่ 1 ก.ค. – 31 ธ.ค. 66 และ ยอดสะสม ระหว่างวันที่ 1 ก.ค. – 31 ธ.ค. 66 เพื่อรับสิทธิ พิเศษ ระหว่างวันที่ วันที่ 1 ม.ค. – 30 มิ.ย. ของปีถัดไป **ลูกค้าจะได้รับการเปลี่ยนแปลงระดับสมาชิกสูงขึ้นทันที เมื่อมียอดเติมเกมสะสมถึงระดับที่กำหนด",
@@ -80,7 +80,7 @@ const termsData = [
     "บริษัทฯ ขอสงวนสิทธิ์ในการเปลี่ยนแปลงคุณสมบัติของผู้ได้รับสิทธิ์รวมถึงการเปลี่ยนแปลง แก้ไข หรือยกเลิกบริการหรือสิทธิพิเศษโดยไม่ต้องแจ้งให้ทราบล่วงหน้า"
   ];
 
-const memberShips = [
+const MEMBERSHIP = [
     {
       id: 1,
       img: "/images/vip-zone/Bronze.svg",
