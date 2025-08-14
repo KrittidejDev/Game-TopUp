@@ -4,7 +4,7 @@ import { PromotionDetailsId } from "./styled";
 import { Cards } from "@/components";
 import { Buttons } from "@/components";
 import { MOCKUP_PACKAGE_DATA } from "@/utils/dataMockup/packageData";
-import { GameRecommendCards } from "@/components/Cards/GameRecommend";
+import GameRecommendedWidget from "@/widgets/GameRecommendedWidget";
 
 const PromotionDetails = () => {
   return (
@@ -119,14 +119,7 @@ const PromotionDetails = () => {
             label={"เติมเกมกันเลย"}
           />
         </div>
-
-        <div className="game_recommend_container">
-          <h1>เกมแนะนำ</h1>
-          <div className="line_decoration"></div>
-          <div className="game_recommend_list">
-              <GameRecommendCards image="/images/game-recommend/game_recommend_01.png" title="Ragnarok X: Next Generation" />
-          </div>
-        </div>
+        <GameRecommendedWidget />
       </PromotionDetailsId>
     </Mainlayouts.NavAndFooterWithBanner>
   );
