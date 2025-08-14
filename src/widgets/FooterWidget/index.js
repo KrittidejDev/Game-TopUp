@@ -9,13 +9,14 @@ const FOOTER_MENU = [
   { label: "VIP Zone", routePath: "/vip-zone" },
   { label: "About Us", routePath: "/about-us" },
   { label: "Bonus", routePath: "/bonus" },
+  { label: "Terms of Service", routePath: "/terms-of-service" },
 ];
 
 export default function FooterWidget() {
   return (
     <FooterStyles>
       <div className="inner">
-        {/* ===== TOP ===== */}
+       
         <div className="top">
           <div className="left">
             <Link href="/" className="logo">
@@ -75,7 +76,7 @@ export default function FooterWidget() {
 
         <div className="bottom">
           <div className="policy">
-            <Link href="/terms" className="policy_link">
+          <Link href="/me/terms-of-service" className="policy_link">
               เงื่อนไขการใช้งาน
             </Link>
             <Link href="/privacy" className="policy_link">
