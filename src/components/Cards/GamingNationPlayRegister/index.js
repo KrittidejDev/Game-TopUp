@@ -6,7 +6,7 @@ import DownArrow from "@/components/Icons/ArrowDown";
 import { Buttons } from "@/components";
 import { useState } from "react";
 
-export function _Accordion() {
+export function _Accordion({ details }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -20,21 +20,22 @@ export function _Accordion() {
       </button>
 
       {isOpen && (
-        <div className="showed_details">นี่คือข้อมูลรายละเอียดเพิ่มเติม</div>
+        <div className="showed_details">{details}</div>
       )}
     </div>
   );
 }
 
-function GamingNationPlayRegisterCard() {
+function GamingNationPlayRegisterCard({data}) {
+
   return (
     <GamingNationPlayRegisterCardWrap>
-      <div className="register_card_container">
+      <div key={data.id} className="register_card_container">
         <div className="package_header">
-          <img src="" alt="" />
+          <img src={data.image} alt={data.title} />
           <div className="header_title">
-            <p className="header_detail">เล่นฟรี 1 วัน จ่าย 9 บาท/วัน</p>
-            <p className="header_price">9 บาท</p>
+            <p className="header_detail">{data.title}</p>
+            <p className="header_price">{data.price}</p>
           </div>
         </div>
         <div className="package_details">
@@ -42,14 +43,14 @@ function GamingNationPlayRegisterCard() {
             <div className="details_left">
               <div className="head_limited_container">
                 <Network />
-                <p className="head_limited">ไม่จำกัด</p>
+                <p className="head_limited">{data.speedLimit}</p>
               </div>
               <p className="detail_limited">เน็ตความเร็วสูง</p>
             </div>
             <div className="details_right">
               <div className="head_detail_container">
                 <Calender />
-                <p className="head_period">1 วัน</p>
+                <p className="head_period">{data.period}</p>
               </div>
               <p className="detail_period">ระยะเวลาการใช้งาน</p>
             </div>
@@ -59,7 +60,7 @@ function GamingNationPlayRegisterCard() {
           </div>
         </div>
         <div className="package_footer">
-          <_Accordion />
+          <_Accordion details={data.details} />
         </div>
       </div>
     </GamingNationPlayRegisterCardWrap>

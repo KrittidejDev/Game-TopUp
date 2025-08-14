@@ -5,7 +5,8 @@ export const MOCKUP_PACKAGE_DATA = [
         price: "9 บาท",
         image: "/images/promotion/img_packageregister_01.png",
         speedLimit: "ไม่จำกัด",
-        period: "1 วัน"   
+        period: "1 วัน",
+        details: "รายละเอียดเพิ่มเติม",
     },
     {
         id: 2,
@@ -13,7 +14,8 @@ export const MOCKUP_PACKAGE_DATA = [
         price: "59 บาท",
         image: "/images/promotion/img_packageregister_02.png",
         speedLimit: "ไม่จำกัด",
-        period: "7 วัน"   
+        period: "7 วัน",
+        details: "รายละเอียดเพิ่มเติม",
     },
     {
         id: 1,
@@ -21,6 +23,7 @@ export const MOCKUP_PACKAGE_DATA = [
         price: "239บาท",
         image: "/images/promotion/img_packageregister_03.png",
         speedLimit: "ไม่จำกัด",
-        period: "30 วัน"   
+        period: "30 วัน",
+        details: "รายละเอียดเพิ่มเติม",
     },
 ]

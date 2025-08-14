@@ -14,8 +14,6 @@ export const GamingNationPlayRegisterCardWrap = styled.div`
       img {
         width: 108px;
         height: 108px;
-        background-color: red;
-        border-radius: 4px;
       }
 
       .header_title {
@@ -84,36 +82,34 @@ export const GamingNationPlayRegisterCardWrap = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
-      
-        .accordion_container {
-          position: relative;
 
-          
-          
-          .more_details_toggle {
-            width: 328px;
-            background-color: #ffffff;
-            font-size: 14px;
-            padding: 15px 25px;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            display: flex; 
-            justify-content: space-between;
-            align-items: center;
-          }
+      .accordion_container {
+        position: relative;
 
-          .showed_details {
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            background-color: #fff;
-            color: black;
-            border-radius: 0 0 4px 4px;
-            padding: 15px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-          }
+        .more_details_toggle {
+          width: 328px;
+          background-color: #ffffff;
+          font-size: 14px;
+          padding: 15px 25px;
+          border-radius: 4px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .showed_details {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          background-color: #fff;
+          color: black;
+          border-radius: 0 0 4px 4px;
+          padding: 15px 0;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
       }
+    }
   }
 `;

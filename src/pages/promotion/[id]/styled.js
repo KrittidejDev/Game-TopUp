@@ -43,9 +43,31 @@ export const PromotionDetailsId = styled.div`
     }
   }
 
+  .package_register_card_wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
   .btn_wrap {
     display: flex;
     margin: 40px 0 25px 0;
     justify-content: center;
+  }
+
+  .game_recommend_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 80px;
+
+    .line_decoration {
+      width: 80px;
+      height: 8px;
+      background: linear-gradient(to right, #FDF092, #E398C1);
+      margin-top: 10px;
+    }
   }
 `;
