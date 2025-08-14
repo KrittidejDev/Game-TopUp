@@ -3,7 +3,6 @@ import { MOCKUP_PROMOTION_BANNER } from "@/utils/dataMockup/promotionCardData";
 import { Cards } from "@/components";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
 
 export function PromotionWidget() {
   const router = useRouter();

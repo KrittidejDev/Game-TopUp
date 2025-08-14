@@ -10,5 +10,9 @@ export const RegisterStyled = styled.div`
           padding: 13.83px 32px 16.17px 32px;
           border-radius: 10px;
           margin-top: 14px;
+
+          &:hover {
+            background-color: #fddc7aff;
+          }
         }
 `

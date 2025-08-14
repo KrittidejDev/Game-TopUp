@@ -1,8 +1,10 @@
 import React from "react";
 import { Mainlayouts } from "@/components";
 import { PromotionDetailsId } from "./styled";
-import GamingNationPlayRegisterCard from "@/components/Cards/GamingNationPlayRegister";
+import { Cards } from "@/components";
 import { Buttons } from "@/components";
+import { MOCKUP_PACKAGE_DATA } from "@/utils/dataMockup/packageData";
+import { GameRecommendCards } from "@/components/Cards/GameRecommend";
 
 const PromotionDetails = () => {
   return (
@@ -96,7 +98,19 @@ const PromotionDetails = () => {
           </ul>
         </div>
 
-        <GamingNationPlayRegisterCard />
+        <div className="package_register_card_wrap">
+          {MOCKUP_PACKAGE_DATA &&
+            MOCKUP_PACKAGE_DATA.map((e) => {
+              return (
+                <div className="package_register_cards" key={e.id}>
+                  <Cards.GamingNationPlayRegisterCard
+                    data={e}
+                    onClickCard={() => _handleClickPromotion(e.id)}
+                  />
+                </div>
+              );
+            })}
+        </div>
         <div className="btn_wrap">
           <Buttons.BgStandard
             theme_grow_pink
@@ -104,6 +118,14 @@ const PromotionDetails = () => {
             className="btn_submit"
             label={"เติมเกมกันเลย"}
           />
+        </div>
+
+        <div className="game_recommend_container">
+          <h1>เกมแนะนำ</h1>
+          <div className="line_decoration"></div>
+          <div className="game_recommend_list">
+              <GameRecommendCards image="/images/game-recommend/game_recommend_01.png" title="Ragnarok X: Next Generation" />
+          </div>
         </div>
       </PromotionDetailsId>
     </Mainlayouts.NavAndFooterWithBanner>
