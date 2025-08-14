@@ -69,5 +69,10 @@ export const PromotionDetailsId = styled.div`
       background: linear-gradient(to right, #FDF092, #E398C1);
       margin-top: 10px;
     }
+
+    .game_recommend_list {
+      display: flex;
+      margin: 80px 0;
+    }
   }
 `;
