@@ -55,7 +55,7 @@ const CardsWidget = () => {
 
       {_filterBtnActice === 1 && (
         <div className="card_wrap">
-          {MOCK_CARD_GAME && MOCK_CARD_GAME.map((e, i) => (
+          {MOCK_CARD_GAME && MOCK_CARD_GAME.slice(0, 12).map((e, i) => (
             <div className="card_item" key={i}>
               <div className="card_game_link" key={e.id} onClick={() => _handleClickGame(e.id)}><Cards.CardsGame data={e} /></div>
             </div>
@@ -65,7 +65,7 @@ const CardsWidget = () => {
 
       {_filterBtnActice === 2 && (
         <div className="card_wrap">
-          {MOCK_CARD_GAME && MOCK_CARD_GAME.map((e, i) => (
+          {MOCK_CARD_GAME && MOCK_CARD_GAME.slice(0, 12).map((e, i) => (
             <div className="card_item" key={i}>
               <Cards.CardsGame data={e} />
             </div>
@@ -75,7 +75,7 @@ const CardsWidget = () => {
 
       {_filterBtnActice === 3 && (
         <div className="card_wrap">
-          {MOCK_CARD_GAME && MOCK_CARD_GAME.map((e, i) => (
+          {MOCK_CARD_GAME && MOCK_CARD_GAME.slice(0, 12).map((e, i) => (
             <div className="card_item" key={i}>
               <Cards.CardsGame data={e} />
             </div>
@@ -85,7 +85,7 @@ const CardsWidget = () => {
 
       {_filterBtnActice === 4 && (
         <div className="card_wrap">
-          {MOCK_CARD_GAME && MOCK_CARD_GAME.map((e, i) => (
+          {MOCK_CARD_GAME && MOCK_CARD_GAME.slice(0, 12).map((e, i) => (
             <div className="card_item" key={i}>
               <Cards.CardsGame data={e} />
             </div>
