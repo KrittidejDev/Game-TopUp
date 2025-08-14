@@ -13,27 +13,27 @@ const PdpaPage = () => {
   return (
     <Mainlayouts.NavAndFooterWithBanner>
         <PdpaContainer>
-    <div className="pdpa-container">
-      <div className="pdpa-main-wrapper">
+    <div className="pdpa_container">
+      <div className="pdpa_main_wrapper">
         
         {/* Main Title */}
-        <h1 className="pdpa-title">
-          {pdpaContent.intro.title}
+        <h1 className="pdpa_title">
+          {PDPA_CONTENT.intro.title}
         </h1>
-        <p className="pdpa-intro-paragraph">
-          {pdpaContent.intro.content}
+        <p className="pdpa_intro_paragraph">
+          {PDPA_CONTENT.intro.content}
         </p>
 
         {/* Dynamic sections */}
-        <div className="pdpa-section-wrapper">
-          {pdpaContent.sections.map((section, index) => (
-            <div key={index} className="pdpa-section">
+        <div className="pdpa_section_wrapper">
+          {PDPA_CONTENT.sections.map((section, index) => (
+            <div key={index} className="pdpa_section">
               {/* Section Title */}
-              <div className="pdpa-section-title-wrapper">
-                <span className="pdpa-section-icon">
+              <div className="pdpa_section_title_wrapper">
+                <span className="pdpa_section_icon">
                   {section.icon}
                 </span>
-                <h2 className="pdpa-section-title">
+                <h2 className="pdpa_section_title">
                   {section.title}
                 </h2>
               </div>
@@ -41,23 +41,23 @@ const PdpaPage = () => {
               {/* Section Content */}
               {/* Handles simple paragraph content */}
               {section.content && Array.isArray(section.content) && (
-                <div className="pdpa-paragraph-container">
+                <div className="pdpa_paragraph_container">
                   {section.content.map((paragraph, pIndex) => (
-                    <p key={pIndex} className="pdpa-paragraph">
+                    <p key={pIndex} className="pdpa_paragraph">
                       {paragraph}
                     </p>
                   ))}
                 </div>
               )}
               {section.content && typeof section.content === 'string' && (
-                <p className="pdpa-paragraph">
+                <p className="pdpa_paragraph">
                   {section.content}
                 </p>
               )}
 
               {/* Handles simple numbered list content */}
               {(section.isList || section.listItems) && (
-                <ol className="pdpa-list">
+                <ol className="pdpa_list">
                   {(section.items || section.listItems).map((item, itemIndex) => (
                     <li key={itemIndex}>{item}</li>
                   ))}
@@ -66,29 +66,29 @@ const PdpaPage = () => {
 
               {/* Handles complex list */}
               {section.isComplexList && (
-                <ol className="pdpa-complex-list">
+                <ol className="pdpa_complex_list">
                   {section.items.map((item) => (
                     <li key={item.id}>
-                      <span className="pdpa-complex-list-item-title">{item.title}</span>
+                      <span className="pdpa_complex_list_item_title">{item.title}</span>
                       {item.items.length > 0 && (
-                        <ul className="pdpa-sub-list">
+                        <ul className="pdpa_sub_list">
                           {item.items.map((subItem, subIndex) => (
                             <li key={subIndex}>{subItem}</li>
                           ))}
                         </ul>
                       )}
                       {item.links && (
-                        <div className="pdpa-links-container">
+                        <div className="pdpa_links_container">
                           {item.links.map((link, linkIndex) => (
                             <span key={linkIndex}>
-                              <a href={link.url} className="pdpa-link">
+                              <a href={link.url} className="pdpa_link">
                                 {link.text}
                               </a>
-                              {linkIndex < item.links.length - 1 && <span className="pdpa-link-separator">:</span>}
+                              {linkIndex < item.links.length - 1 && <span className="pdpa_link_separator">:</span>}
                             </span>
                           ))}
                           {item.additionalText && (
-                            <span className="pdpa-additional-text">{item.additionalText}</span>
+                            <span className="pdpa_additional_text">{item.additionalText}</span>
                           )}
                         </div>
                       )}
@@ -99,7 +99,7 @@ const PdpaPage = () => {
 
               {/* Handles content after a list */}
               {section.afterListContent && (
-                <p className="pdpa-after-list-content">
+                <p className="pdpa_after_list_content">
                   {section.afterListContent}
                 </p>
               )}
@@ -108,8 +108,8 @@ const PdpaPage = () => {
         </div>
 
         {/* Last updated date */}
-        <div className="pdpa-last-updated">
-          {pdpaContent.lastUpdated}
+        <div className="pdpa_last_updated">
+          {PDPA_CONTENT.lastUpdated}
         </div>
       </div>
     </div>
@@ -118,7 +118,7 @@ const PdpaPage = () => {
   );
 };
 
-const pdpaContent = {
+const PDPA_CONTENT = {
   title: "นโยบายความเป็นส่วนตัว",
   intro: {
     title: "นโยบายความเป็นส่วนตัว",
@@ -134,7 +134,7 @@ const pdpaContent = {
      
       title: "ข้อมูลส่วนบุคคล",
       content: [
-        "ข้อมูลส่วนบุคคลหมายถึงข้อมูลเกี่ยวกับบุคคลซึ่งทำให้สามารถระบุตัวตนบุคคลนั้นได้ไม่ว่าทางตรงหรือทางอ้อม แต่ไม่รวมถึงข้อมูลของผู้ถึงแก่กรรมโดยเฉพาะ เช่น ชื่อ นามสกุล ที่อยู่ หมายเลขโทรศัพท์ เลขประจำตัวประชาชน เลขบัตรประกันสังคม เลขประจำตัวผู้เสียภาษี ที่อยู่อีเมล (email-address) IP Address, Cookie ID, Log File เป็นต้น แต่อย่างไรก็ดีข้อมูลดังต่อไปนี้ไม่ใช่ข้อมูลส่วนบุคคล เช่น ข้อมูลการติดต่อทางธุรกิจที่ไม่มีการระบุถึงตัวบุคคล ชื่อบริษัท ที่อยู่ของบริษัท เลขทะเบียนนิติบุคคล หมายเลขโทรศัพท์ที่ทำงาน ที่อยู่อีเมลที่ใช้ในการทำงาน หรือที่อยู่อีเมล์ของกลุ่มบริษัท ข้อมูลนิรนาม หรือข้อมูลแฝงที่ไม่สามารถระบุตัวตนได้ และ/หรือข้อมูลผู้ถึงแก่กรรม เป็นต้น",
+        "ข้อมูลส่วนบุคคลหมายถึงข้อมูลเกี่ยวกับบุคคลซึ่งทำให้สามารถระบุตัวตนบุคคลนั้นได้ไม่ว่าทางตรงหรือทางอ้อม แต่ไม่รวมถึงข้อมูลของผู้ถึงแก่กรรมโดยเฉพาะ เช่น ชื่อ นามสกุล ที่อยู่ หมายเลขโทรศัพท์ เลขประจำตัวประชาชน เลขบัตรประกันสังคม เลขประจำตัวผู้เสียภาษี ที่อยู่อีเมล (email_address) IP Address, Cookie ID, Log File เป็นต้น แต่อย่างไรก็ดีข้อมูลดังต่อไปนี้ไม่ใช่ข้อมูลส่วนบุคคล เช่น ข้อมูลการติดต่อทางธุรกิจที่ไม่มีการระบุถึงตัวบุคคล ชื่อบริษัท ที่อยู่ของบริษัท เลขทะเบียนนิติบุคคล หมายเลขโทรศัพท์ที่ทำงาน ที่อยู่อีเมลที่ใช้ในการทำงาน หรือที่อยู่อีเมล์ของกลุ่มบริษัท ข้อมูลนิรนาม หรือข้อมูลแฝงที่ไม่สามารถระบุตัวตนได้ และ/หรือข้อมูลผู้ถึงแก่กรรม เป็นต้น",
         "ทั้งนี้ ต่อไปในประกาศความเป็นส่วนตัวฉบับนี้ หากไม่มีการกล่าวโดยเฉพาะเจาะจงจะเรียก “ข้อมูลส่วนบุคคล” และ “ข้อมูลส่วนบุคคลที่ละเอียดอ่อน” ที่เกี่ยวกับผู้ใช้บริการข้างต้นให้รวมกันเรียกว่า “ข้อมูลส่วนบุคคล”",
         "ในกรณีที่บริษัทได้รับสำเนาบัตรประจำตัวประชาชนของท่าน เพื่อวัตถุประสงค์ในการพิสูจน์ตัวตนในการก่อนิติสัมพันธ์ทางกฎหมาย และ/หรือการทำธุรกรรมใด ๆ กับบริษัท บริษัทไม่มีนโยบายการเก็บรวบรวมข้อมูลที่มีความละเอียดอ่อน (Sensitive Data) อาทิ ข้อมูลศาสนา ยกเว้นในกรณีที่บริษัทได้รับความยินยอมจากท่าน ทั้งนี้บริษัทจะกำหนดวิธีการจัดการตามแนวทางปฏิบัติและเป็นไปตามที่กฎหมายอนุญาต"
       ]
