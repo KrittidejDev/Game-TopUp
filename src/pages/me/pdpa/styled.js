@@ -188,7 +188,7 @@ export const PdpaContainer = styled.main`
   }
 
   .pdpa_link {
-    color: #a58bff;
+    color: #ec4899;
     text-decoration: underline;
     text-underline-offset: 2px;
     
