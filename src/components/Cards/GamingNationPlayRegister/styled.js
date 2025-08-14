@@ -6,6 +6,11 @@ export const GamingNationPlayRegisterCardWrap = styled.div`
     height: 421px;
     background-color: #f7f5ed;
     border-radius: 8px;
+    transition: transform 0.3s, filter 0.3s;
+
+    &:hover {
+      transform: scale(102%);
+    }
 
     .package_header {
       display: flex;

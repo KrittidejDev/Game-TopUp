@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useState } from "react";
 import { CardsWidgetContainer } from "./styled";
 import { Cards } from "@/components";
 import { Buttons } from "@/components"
