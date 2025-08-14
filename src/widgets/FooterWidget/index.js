@@ -79,7 +79,7 @@ export default function FooterWidget() {
           <Link href="/me/terms-of-service" className="policy_link">
               เงื่อนไขการใช้งาน
             </Link>
-            <Link href="/privacy" className="policy_link">
+            <Link href="/me/pdpa" className="policy_link">
               นโยบายความเป็นส่วนตัว
             </Link>
           </div>

@@ -9,13 +9,13 @@ export const PdpaContainer = styled.main`
   --c-muted:  ${({ theme }) => get(theme, "COLORS.WHITE_3", "rgba(255,255,255,.72)")};
   --accent:   ${({ theme }) => get(theme, "COLORS.PURPLE_1", "#a58bff")};
   --accent-2: ${({ theme }) => get(theme, "COLORS.PINK_1",   "#ff66cc")};
-  .pdpa-container {
+  .pdpa_container {
     background-color: #0f0f0f;
     color: white;
     min-height: 100vh;
   }
 
-  .pdpa-main-wrapper {
+  .pdpa_main_wrapper {
     margin: 0 auto;
     max-width: 80rem; /* max-w-7xl */
     padding: 2rem 1rem 4rem 1rem; /* py-8 px-4, md:py-16 */
@@ -26,7 +26,7 @@ export const PdpaContainer = styled.main`
   }
 
   /* Header styling */
-  .pdpa-title {
+  .pdpa_title {
     text-align: center;
     font-size: 2.5rem; /* text-4xl */
     font-weight: bold;
@@ -44,7 +44,7 @@ export const PdpaContainer = styled.main`
     }
   }
 
-  .pdpa-intro-paragraph {
+  .pdpa_intro_paragraph {
     color: rgba(255, 255, 255, 0.72);
     line-height: 1.625;
     font-size: 1rem;
@@ -68,7 +68,7 @@ export const PdpaContainer = styled.main`
     }
   }
 
-  .pdpa-section-wrapper {
+  .pdpa_section_wrapper {
     background-color: #111;
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 1.5rem;
@@ -89,7 +89,7 @@ export const PdpaContainer = styled.main`
   }
 
   /* Section styling */
-  .pdpa-section {
+  .pdpa_section {
     &:not(:first-child) {
       margin-top: 2rem;
       
@@ -99,11 +99,11 @@ export const PdpaContainer = styled.main`
     }
   }
 
-  .pdpa-section-title-wrapper {
+  .pdpa_section_title_wrapper {
     margin-bottom: 1rem;
   }
 
-  .pdpa-section-title {
+  .pdpa_section_title {
     font-size: 1.5rem; /* text-2xl */
     font-weight: bold;
     margin-bottom: 1rem;
@@ -132,7 +132,7 @@ export const PdpaContainer = styled.main`
     margin-bottom: 1rem;
   }
 
-  .pdpa-paragraph {
+  .pdpa_paragraph {
     color: rgba(255, 255, 255, 0.72);
     line-height: 1.625;
     font-size: 1rem;
@@ -140,7 +140,7 @@ export const PdpaContainer = styled.main`
   }
 
   /* List styling */
-  .pdpa-list {
+  .pdpa_list {
     list-style-type: decimal;
     list-style-position: inside;
     margin-bottom: 1rem;
@@ -153,7 +153,7 @@ export const PdpaContainer = styled.main`
     }
   }
 
-  .pdpa-complex-list {
+  .pdpa_complex_list {
     list-style-type: decimal;
     list-style-position: inside;
     margin-bottom: 1rem;
@@ -166,12 +166,12 @@ export const PdpaContainer = styled.main`
     }
   }
 
-  .pdpa-complex-list-item-title {
+  .pdpa_complex_list_item_title {
     font-weight: bold;
     color: rgba(255, 255, 255, 0.85);
   }
 
-  .pdpa-sub-list {
+  .pdpa_sub_list {
     list-style-type: disc;
     list-style-position: inside;
     margin-left: 1rem;
@@ -182,13 +182,13 @@ export const PdpaContainer = styled.main`
     }
   }
 
-  .pdpa-links-container {
+  .pdpa_links_container {
     margin-top: 0.5rem;
     color: rgba(255, 255, 255, 0.72);
   }
 
-  .pdpa-link {
-    color: #a58bff;
+  .pdpa_link {
+    color: #ec4899;
     text-decoration: underline;
     text-underline-offset: 2px;
     
@@ -197,15 +197,15 @@ export const PdpaContainer = styled.main`
     }
   }
 
-  .pdpa-link-separator {
+  .pdpa_link_separator {
     margin: 0 0.25rem;
   }
 
-  .pdpa-additional-text {
+  .pdpa_additional_text {
     margin-left: 0.25rem;
   }
 
-  .pdpa-after-list-content {
+  .pdpa_after_list_content {
     color: rgba(255, 255, 255, 0.72);
     line-height: 1.625;
     font-size: 1rem;
@@ -213,7 +213,7 @@ export const PdpaContainer = styled.main`
   }
 
   /* Last updated styling */
-  .pdpa-last-updated {
+  .pdpa_last_updated {
     margin-top: 2rem;
     padding-top: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
