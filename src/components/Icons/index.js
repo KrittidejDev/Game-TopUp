@@ -7,6 +7,7 @@ import Clock from "./Clock";
 import NavbarIcon from "./NavbarIcon";
 import Network from "./Network";
 import Calender from "./Calender";
+import DownArrow from "./ArrowDown";
 
 const EXPORT = {
   //   BgStandard,
@@ -18,6 +19,7 @@ const EXPORT = {
   NavbarIcon,
   Network,
   Calender,
+  DownArrow,
 };
 
 export default EXPORT;

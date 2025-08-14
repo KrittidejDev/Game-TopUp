@@ -2,7 +2,29 @@ import React from "react";
 import { GamingNationPlayRegisterCardWrap } from "./styled";
 import Network from "@/components/Icons/Network";
 import Calender from "@/components/Icons/Calender";
+import DownArrow from "@/components/Icons/ArrowDown";
 import { Buttons } from "@/components";
+import { useState } from "react";
+
+export function _Accordion() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="accordion_container">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="more_details_toggle"
+      >
+        รายละเอียดเพิ่มเติม
+        <DownArrow />
+      </button>
+
+      {isOpen && (
+        <div className="showed_details">นี่คือข้อมูลรายละเอียดเพิ่มเติม</div>
+      )}
+    </div>
+  );
+}
 
 function GamingNationPlayRegisterCard() {
   return (
@@ -37,7 +59,7 @@ function GamingNationPlayRegisterCard() {
           </div>
         </div>
         <div className="package_footer">
-          <button>รายละเอียดเพิ่มเติม</button>
+          <_Accordion />
         </div>
       </div>
     </GamingNationPlayRegisterCardWrap>
