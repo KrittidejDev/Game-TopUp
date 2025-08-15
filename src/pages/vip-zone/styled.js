@@ -44,7 +44,7 @@ export const VipZoneContainer = styled.div`
       justify-content: center;
       .top_up_privileges{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         .top_up_privileges_title{
           font-size: ${({ theme }) => theme.FONTS.SIZES.S28};
           font-weight: 500;
