@@ -1,162 +1,184 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const PrivilegesContainer= styled.div`
-  
-  
-  
-  .filter_wrap {
-    margin-bottom: 32px;
+export const PrivilegesContainer = styled.div`
+ 
+  .filter_tabs_container {
   }
-  
-  .filter_btn_row {
+
+  .filter_tabs_row {
     display: flex;
-    gap: 8px;
-    margin-bottom: 24px;
+    gap: 2px;
+    width: fit-content;
   }
-  
-  .filter_btn {
+
+  .filter_tab {
     display: flex;
     align-items: center;
+    gap: 8px;
     padding: 12px 20px;
-    border: none;
-    border-bottom: 2px solid transparent;
+    border-radius: 6px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 14px;
-    font-weight: 600;
-    color: #cccccc;
-    min-width: 120px;
-    justify-content: space-between;
-    
-    &.active {
-      background: transparent;
-      border-bottom-color: #ff4757;
-      color: #ffffff;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    position: relative;
+
+    &:hover {
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: #ff3366;
+      }
     }
-    
+
+    &.active {
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: #ff3366;
+      }
+    }
+
     .tier_icon {
-      margin-left: 8px;
       display: flex;
       align-items: center;
       
-      
-    }
-    
-    &.active .tier_icon img {
-      opacity: 1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
     }
   }
-  
+
   .membership_display {
-    border-radius: 16px;
+    max-width: 800px;
+  }
+
+  .membership_card {
+    border-radius: 12px;
     padding: 24px;
   }
-  
-  .membership_card {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-  
+
   .benefit_section {
-    border-radius: 12px;
-    padding: 20px;
-    border-left: 4px solid transparent;
-    
-   
-  }
-  
-  .benefit_header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-    gap: 12px;
-  }
-  
-  .benefit_icon {
-    
-    flex-shrink: 0;
-  }
-  
-  .benefit_title {
-    font-size: 16px;
-    font-weight: 600;
-    color: #ffffff;
-    line-height: 1.4;
-  }
-  
-  .benefit_description {
-    font-size: 14px;
-    color: #cccccc;
-    line-height: 1.5;
-    margin-left: 36px;
-  }
-  
-  .benefit_item {
-    font-size: 14px;
-    color: #cccccc;
-    line-height: 1.5;
-    margin-left: 36px;
-    margin-bottom: 8px;
-    position: relative;
-    
-    &:before {
-      content: '•';
-      color: #ff6b9d;
-      margin-right: 8px;
-    }
-    
+    margin-bottom: 24px;
+
     &:last-child {
       margin-bottom: 0;
     }
   }
-  
+
+  .benefit_header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+
+    .benefit_icon {
+      width: 24px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        
+        object-fit: contain;
+      }
+    }
+
+    .benefit_title {
+      font-size: ${({ theme }) => theme.FONTS.SIZES.S28};
+      font-weight: 500;
+    }
+  }
+
+  .benefit_description {
+    line-height: 1.5;
+    padding-left: 36px;
+    font-weight: 100;
+    font-size: ${({ theme }) => theme.FONTS.SIZES.S20}
+  }
+
+  .benefit_item {
+    line-height: 1.6;
+    padding-left: 36px;
+    margin-bottom: 8px;
+    position: relative;
+    font-weight: 100;
+    font-size: ${({ theme }) => theme.FONTS.SIZES.S20};
+    
+
+    &:before {
+      content: "•";
+      font-weight: bold;
+      position: absolute;
+      left: 20px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   /* Responsive Design */
   @media (max-width: 768px) {
     padding: 16px;
-    
-    .filter_btn_row {
+
+    .filter_tabs_row {
       flex-wrap: wrap;
-      gap: 6px;
+      width: 100%;
     }
-    
-    .filter_btn {
-      min-width: 100px;
-      padding: 10px 16px;
-      font-size: 13px;
+
+    .filter_tab {
+      flex: 1;
+      justify-content: center;
+      min-width: 120px;
+      padding: 10px 12px;
     }
-    
-    .membership_display {
-      padding: 16px;
+
+    .membership_card {
+      padding: 20px;
     }
-    
-    .benefit_section {
-      padding: 16px;
-    }
-    
-    .benefit_title {
-      font-size: 15px;
-    }
-    
+
     .benefit_description,
     .benefit_item {
-      font-size: 13px;
-      margin-left: 32px;
+      padding-left: 32px;
+    }
+
+    .benefit_item:before {
+      left: 16px;
     }
   }
-  
+
   @media (max-width: 480px) {
-    .filter_btn_row {
+    .filter_tabs_row {
       flex-direction: column;
+      gap: 4px;
     }
-    
-    .filter_btn {
-      min-width: 100%;
-      justify-content: center;
-    }
-    
-    .tier_icon {
-      margin-left: 12px;
+
+    .filter_tab {
+      justify-content: flex-start;
+      width: 100%;
+      min-width: auto;
     }
   }
-`
+  .follow_announcement {
+    font-size: ${({ theme }) => theme.FONTS.SIZES.S20};
+    color: ${({ theme }) => theme.COLORS.PRIMARY};
+    font-weight: 100;
+    margin-left: 8px;
+
+   
+  }
+`;
+
+// Helper function to get tier colors
